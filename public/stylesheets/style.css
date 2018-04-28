@@ -1,0 +1,82 @@
+body {
+  padding: 50px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* body { */
+/*     margin: 0; */
+/*     font-family: Arial, Helvetica, sans-serif; */
+/* } */
+
+a {
+  color: #00B7FF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style the content */
+.content {
+    margin-left: 500px;
+    padding-left: 0px;
+}
+
+.da {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+/* Style the side navigation */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #242424;
+    overflow-x: hidden;
+}
+
+/* Side navigation links */
+.sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.middle {
+    margin-left: 200px;
+    padding-left: 0px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 200;
+    background-color: #119988;
+    overflow-x: hidden;
+}
+
+/* Side navigation links */
+.middle a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.middle a:hover {
+    background-color: #387707;
+    color: black;
+}
+
