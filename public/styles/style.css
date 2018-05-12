@@ -7,6 +7,8 @@ body {
 	/* font: 20px "Lucida Grande", Helvetica, Arial, sans-serif; */
     padding: 10px;
     background: #f1f1f1;
+	max-width: 1500px;
+	margin: auto;
 }
 
 .header{
@@ -122,4 +124,13 @@ img {
         float: none;
         width: 100%;
     }
+}
+
+.footer{
+    /* background: #f1f1f1; */
+	margin: 100px 0;
+    text-align: center;
+    /* padding: 30px; */
+	/* height: 120px; */
+	/* width: 100%; */
 }

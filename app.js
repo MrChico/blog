@@ -6,12 +6,12 @@ var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
+var notesRouter = require('./routes/notes');
+var papersRouter = require('./routes/papers');
 
-// var phdRouter = require('./routes/phd');
+// var usersRouter = require('./routes/users');
 // var postsRouter = require('./routes/posts');
-// var papersRouter = require('./routes/papers');
 
 var app = express();
 
@@ -27,9 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
-// app.use('/papers', papersRouter);
+app.use('/papers', papersRouter);
+app.use('/notes', notesRouter);
 
-// app.use('/phd', phdRouter);
 // app.use('/posts', postsRouter);
 // app.use('/users', usersRouter);
 
