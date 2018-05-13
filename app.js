@@ -9,9 +9,7 @@ var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var notesRouter = require('./routes/notes');
 var papersRouter = require('./routes/papers');
-
-// var usersRouter = require('./routes/users');
-// var postsRouter = require('./routes/posts');
+var testRouter = require('./routes/testRoute');
 
 var app = express();
 
@@ -28,10 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/papers', papersRouter);
+app.use('/test', testRouter);
 app.use('/notes', notesRouter);
-
-// app.use('/posts', postsRouter);
-// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
