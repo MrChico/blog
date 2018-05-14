@@ -1,5 +1,7 @@
 #!/bin/bash
 
+google-chrome --new-window http://localhost:3003 &
+
 # Starts tmux if tmux is not opened
 if [ "$TMUX" = "" ]; then 
 	tmux new
@@ -16,6 +18,3 @@ tmux rename-window -t $session:1 "Node"
 tmux select-window -t $session:0
 tmux rename-window -t $session:0 "Vim"
 tmux send-keys -t $session:0 "vim" Enter
-
-
-google-chrome --new-window http://localhost:3003

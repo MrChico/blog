@@ -5,11 +5,11 @@ var path         = require('path');
 var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
 
-var indexRouter = require('./routes/index');
-var aboutRouter = require('./routes/about');
-var notesRouter = require('./routes/notes');
+var indexRouter  = require('./routes/index');
+var aboutRouter  = require('./routes/about');
+var notesRouter  = require('./routes/notes');
 var papersRouter = require('./routes/papers');
-var testRouter = require('./routes/testRoute');
+var testRouter   = require('./routes/testRoute');
 
 var app = express();
 
@@ -45,9 +45,11 @@ app.use(function(err, req, res, next) {
 	res.render('error');
 });
 
+
 app.on('connection', (socket) => {
 	console.log('listening client')
 })
+
 
 var PORT=3003
 app.listen(3003)
