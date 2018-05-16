@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>Blog</title>
 
-	<link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="/styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<script> 
 	  $(function(){
 		$("#header").load("header.html"); 
@@ -15,6 +16,7 @@
 	  });
 	</script> 
 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
   <body>
 	<div id="header"></div>
@@ -75,19 +77,19 @@
 
 	<div id="footer"></div>
 
-	<script>
-	  $(function(){
-		$('.button').on('click', function(){
-		  var postTitle = $(this).parent().find('h1').text()
-		  location.href = "/notes/" + postTitle
-		})
+	<!-- <script> -->
+	<!--   $(function(){ -->
+	<!-- 	$('.button').on('click', function(){ -->
+	<!-- 	  var postTitle = $(this).parent().find('h1').text() -->
+	<!-- 	  location.href = "/notes/" + postTitle -->
+	<!-- 	}) -->
+		<!-- $('.about').on('click', function(){ -->
+		<!--   location.href = "/about" -->
+		<!-- }) -->
+	  <!-- }); -->
+	<!-- </script> --> 
 
-		$('.about').on('click', function(){
-		  location.href = "/about"
-		})
-	  });
-	</script> 
-
+	<script src="scripts/index.js"></script>
   </body>
 
 </html>
