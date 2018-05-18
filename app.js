@@ -4,31 +4,34 @@ var express      = require('express');
 var path         = require('path');
 var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
+var fs           = require('fs');
 
-var indexRouter  = require('./routes/index');
-var aboutRouter  = require('./routes/about');
-var notesRouter  = require('./routes/notes');
-var papersRouter = require('./routes/papers');
-var testRouter   = require('./routes/testRoute');
+var indexRouter    = require('./routes/index');
+var aboutRouter    = require('./routes/about');
+var notesRouter    = require('./routes/notes');
+var papersRouter   = require('./routes/papers');
+var bookRouter     = require('./routes/books');
+var workflowRouter = require('./routes/workflow');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.set('port', process.env.PORT || 3003)
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use('/public', express.static(__dirname + '/public'));
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
+app.use('/books', bookRouter);
+app.use('/note', notesRouter);
 app.use('/papers', papersRouter);
-app.use('/test', testRouter);
-app.use('/notes', notesRouter);
+app.use('/workflow', workflowRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
