@@ -19,18 +19,21 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routes
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/books', bookRouter);
 app.use('/note', notesRouter);
-sspp.use('/papers', papersRouter);
+app.use('/papers', papersRouter);
 app.use('/workflow', workflowRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,7 +56,6 @@ app.on('connection', (socket) => {
 	console.log('listening client')
 })
 
-// app.set('port', process.env.PORT || 3003)
 
 const server = app.listen(process.env.PORT || 3003, () => {
   console.log('Listening', server.address());

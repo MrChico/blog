@@ -1,24 +1,41 @@
 
-var express = require('express');
-var path = require('path');
-var fs = require('fs');
-var router = express.Router();
+var express  = require('express');
+var router   = express.Router();
+var path     = require('path');
+var fs       = require('fs');
+var showdown = require('showdown');
+showdown.setFlavor('github');
 
-const noteFolderPath = path.join(__dirname, '../public/scribbles')
-var files = fs.readdirSync(noteFolderPath);
+const notePath = path.join(__dirname, '../public/scribbles');
+
+function readDir(dirPath) {
+	console.log('path:', dirPath);
+	var notes = fs.readdirSync(dirPath);
+
+	var filePath;
+	var text;
+	var filePath;
+	// for (var i = 0; i < notes.length; i++) {
+	// 	filePath = path.join(dirPath, notes[i]);
+	// 	console.log('Filepath: ' + filePath);
+	// 	text = fs.readFileSync(filePath);
+	// 	console.log('text \n ' + text);
+	// };
+	return notes
+}
+
+var notes = readDir(notePath);
 
 router.get('/', function(req, res, next) {
-	console.log(path.join(__dirname, '../views/notes.html'));
-	res.sendFile(path.join(__dirname, '../views/notes.html'));
+
+	// var converter = new showdown.Converter();
+	// var rlHtml = converter.makeHtml(rlText);
+	res.render('notes', {
+		title: 'Notes',
+		h1: 'Notes',
+		notes: notes,
+	});
 });
 
-
-router.get('/:id', function(req, res, next) {
-	console.log('This is log: '+ req.params.id);
-	var fileIndex = req.params.id;
-	res.sendFile(path.join(noteFolderPath, files[fileIndex]));
-});
-
-	
 
 module.exports = router;

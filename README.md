@@ -33,4 +33,10 @@ way I want.
   words/phrases and their meanings. 
 
 
+### Notes
+
+
+##### [Academind - tutorial](https://www.youtube.com/watch?v=bf8L9tQi_MQ)
+
+
 
