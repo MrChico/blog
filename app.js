@@ -29,7 +29,7 @@ app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/books', bookRouter);
 app.use('/note', notesRouter);
-app.use('/papers', papersRouter);
+sspp.use('/papers', papersRouter);
 app.use('/workflow', workflowRouter);
 
 // catch 404 and forward to error handler
@@ -58,9 +58,5 @@ app.on('connection', (socket) => {
 const server = app.listen(process.env.PORT || 3003, () => {
   console.log('Listening', server.address());
 });
-
-// var PORT=3003
-// app.listen(3003)
-// console.log('listening on port ' + PORT) 
 
 module.exports = app;
