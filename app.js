@@ -18,7 +18,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.set('port', process.env.PORT || 3003)
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -54,8 +53,14 @@ app.on('connection', (socket) => {
 	console.log('listening client')
 })
 
+// app.set('port', process.env.PORT || 3003)
 
-var PORT=3003
-app.listen(3003)
-console.log('listening on port ' + PORT) 
+const server = app.listen(process.env.PORT || 3003, () => {
+  console.log('Listening', server.address());
+});
+
+// var PORT=3003
+// app.listen(3003)
+// console.log('listening on port ' + PORT) 
+
 module.exports = app;
