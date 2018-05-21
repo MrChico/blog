@@ -34,7 +34,6 @@ app.use('/note', notesRouter);
 app.use('/papers', papersRouter);
 app.use('/workflow', workflowRouter);
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	next(createError(404));

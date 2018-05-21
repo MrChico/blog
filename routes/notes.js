@@ -6,35 +6,31 @@ var fs       = require('fs');
 var showdown = require('showdown');
 showdown.setFlavor('github');
 
-const notePath = path.join(__dirname, '../public/scribbles');
+const notePath = path.join(__dirname, '../public/notes');
 
 function readDir(dirPath) {
-	console.log('path:', dirPath);
 	var notes = fs.readdirSync(dirPath);
-
-	var filePath;
-	var text;
-	var filePath;
-	// for (var i = 0; i < notes.length; i++) {
-	// 	filePath = path.join(dirPath, notes[i]);
-	// 	console.log('Filepath: ' + filePath);
-	// 	text = fs.readFileSync(filePath);
-	// 	console.log('text \n ' + text);
-	// };
-	return notes
+	var name;
+	var noteNames = {};
+	for (var i = 0; i < notes.length ; i++) {
+		name = notes[i].slice(0,-3);
+		noteNames[name] = notes[i];
+	}
+	return noteNames
 }
 
-var notes = readDir(notePath);
+var notes = {
+	title: 'Vim',
+	mainTitle: 'Vim - Main',
+	mainHtml: '',
+	menuItems: readDir(notePath),
+	todoItems:  ['Vim', 'Blog', 'Everything'] };
+
 
 router.get('/', function(req, res, next) {
-
 	// var converter = new showdown.Converter();
 	// var rlHtml = converter.makeHtml(rlText);
-	res.render('notes', {
-		title: 'Notes',
-		h1: 'Notes',
-		notes: notes,
-	});
+	res.render('generic', notes);
 });
 
 

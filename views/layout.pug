@@ -2,12 +2,16 @@ doctype html
 html
 	head
 		title= title
-		link(rel='stylesheet', href='styles/style.css')
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		block headscripts  // placeholder for scripts
+		link(rel='stylesheet', href='/styles/style.css')
+		block styles  // placeholder for styles
 	body
 		div(class='header')
 			div(class='blog-info')
-				h1(class='blog-name') Erik Ekstedt
+				h1(class='blog-name'): a(href="/") Erik Ekstedt
 				p(class='blog-description') I am interested in AI and minds
+
 			div(class='topnav')
 				a(href="/") Home
 				a(href="/note") Notes
@@ -18,4 +22,4 @@ html
 		div(class='content')
 			block content
 		div(class='footer')
-			a(href='https://www.github.com/ErikEkstedt'): img(src="icons/github.svg" style="width: 100px")
+			a(href='https://www.github.com/ErikEkstedt'): img(src="/icons/github.svg" style="width: 100px")

@@ -1,25 +1,51 @@
+/* -------------- BODY ----------------{{{ */
 * {
 	box-sizing: border-box;
 }
 
-body {
+html,body {
 	font-family: Arial;
-	/* font: 20px "Lucida Grande", Helvetica, Arial, sans-serif; */
-	padding: 10px;
+	padding: 10px 20px;
 	background: #f1f1f1;
-	max-width: 1500px;
+	height: 100%;
 	margin: auto;
+	max-width: 1500px;
 }
-
-/* ---------------------------------------------- */
+/* }}} */
+/* -------------- HEADER ----------------{{{ */
 .header{
 	background: white;
 	text-align: center;
-	height: 120px;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 50px;
+}
+
+.blog-info {
+	margin: 10px 0;
+
+	@include mobile {
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.blog-name {
+	padding: 30px 0 0 0;
+	color: #BBB;
+	cursor: pointer;
+}
+
+.blog-name a{
+    text-decoration: none;
+	color: #BBB;
+}
+
+.blog-description {
+	margin: -5px 0;
+	color: gray;
 }
 
 .topnav {
@@ -28,6 +54,9 @@ body {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	/* margin: auto; */
+	/* position: relative; */
+	/* bottom: 0px; */
 }
 
 .topnav a {
@@ -49,60 +78,69 @@ body {
 	color: black;
 }
 
+.profile-pic {
+	margin: 5px 0px; 
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
 
-/* ---------------------------------------------- */
-.notenav {
+.profile:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* }}} */ 
+/* -------------- CONTENT ---------------- {{{ */
+
+.content {
+	margin: auto;
+	width: 100%;
+	height: 70%;
+}
+
+.content .menu {
 	float: left;
-	width: 25%;
-	height: 90%;
+	height: 100%;
+	width: 20%;
 	background-color: #333;
 }
 
-.notenav ul {
+.content .menu ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.notenav li a {
+.content .menu li a{
 	display: block;
 	color: #f2f2f2;
 	padding: 8px 8px;
 	text-decoration: none;
 }
 
-.notenav li a:hover {
+.content .menu li a:hover{
 	background-color: #ddd;
 	color: black;
+	cursor: default;
 }
 
-.notecontent {
-	float: right;
-	width: 75%;
-	text-align: center;
-	/* height: 1000px; */
-	background-color: #aa9922;
-}
-
-/* ---------------------------------------------- */
-.content {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.leftcolumn {   
+.content .main {
+	background-color: #08B5B1;
+	height: 100%;
 	float: left;
-	width: 75%;
-	padding-right: 10px;
-	max-width: 750px;
+	width: 56%;
+	padding: 10px;
+	margin: 0 2%;
 }
 
-/* Right column */
-.rightcolumn {
+.content .todo {
+	background-color: #447744;
 	float: left;
-	width: 25%;
+	height: 100%;
+	width: 20%;
 	padding-left: 10px;
-	max-width: 250px;
 }
 
 /* Add a card effect for articles */
@@ -118,48 +156,6 @@ body {
 	box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
 }
 
-
-.profile-pic {
-	margin: 5px 0px; 
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-}
-
-.profile:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.blog-info {
-	/* float: center; */
-	margin: 10px 0;
-	/* display: inline-block; */
-
-	@include mobile {
-		float: none;
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-.blog-name {
-	/* background: #F77; */
-	padding: 30px 0 0 0;
-	color: #BBB;
-	cursor: pointer;
-	/* display: inline; */
-}
-
-.blog-description {
-	/* background: #555; */
-	margin: -5px 0;
-	color: gray;
-	/* display: inline; */
-}
-
-
 img {
 	max-width: 100%;
 }
@@ -171,46 +167,33 @@ img {
 	clear: both;
 }
 
-.about {
-	cursor: pointer;
-}
 
-.button {
-	background-color: #4CAF50;
-	border: none;
-	color: white;
-	padding: 15px 32px;
+/* }}} */
+/* -------------- Footer ---------------- {{{ */
+.footer{
+	background: #DDD;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	-webkit-transition-duration: 0.4s; /* Safari */
-	transition-duration: 0.4s;
-	border-radius: 5px;
+	margin-top: 20px;
+	/* width: 100%; */
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	/* margin-bottom: 50px; */
 }
-
-.button:hover {
-	background-color: #2C8F30;
+/* }}} */
+/* -------------- Responsive ---------------- {{{ */
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
 }
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
-	.topnav a {
-		float: none;
-		width: 100%;
-	}
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
 }
-
-.footer{
-	/* background: #f1f1f1; */
-    /* position: fixed; */
-    /* left: 0; */
-    /* bottom: 0; */
-	margin: 30px 0;
-    width: 100%;
-    background-color: #ddd;
-    color: white;
-    text-align: center;
-}
+/* }}} */

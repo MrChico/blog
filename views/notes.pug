@@ -1,10 +1,13 @@
 extends layout
 
 block content
-		div(class='row')
-			div(class='notenav')
-				ul
-					each note in notes
-						li: a(href='scribbles/' + note)= note
-			div(class='notecontent')
-				h2 notecontent
+	div(class="menu")
+		ul
+			each i, item in menuItems
+				li: a(class='menuButton' id=item)= i
+
+	div(class="main")
+		h2 main
+
+	div(class="todo")
+		h2 todo
