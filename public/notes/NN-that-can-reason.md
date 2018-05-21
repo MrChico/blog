@@ -24,7 +24,7 @@ Paper Presentations:
 
 # CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning ([website](https://cs.stanford.edu/people/jcjohns/clevr/), [arxiv]( https://arxiv.org/abs/1612.06890), [pdf]( https://arxiv.org/pdf/1612.06890.pdf))
 
-![CLEVR](images/CLEVR_paper.png)
+![CLEVR](/images/CLEVR_paper.png)
 
 ### <strong>Questions to be answered:</strong>
 #### 1. What is the purpose of this dataset?
@@ -71,7 +71,7 @@ world visual reasoning and the authors state that
 ---------------------
 ### Notes
 
-<img src="./images/CLEVR_figure.png"></img>
+<img src="/images/CLEVR_figure.png"></img>
 
 ### Code 
 

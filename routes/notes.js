@@ -6,16 +6,20 @@ var fs       = require('fs');
 var showdown = require('showdown');
 showdown.setFlavor('github');
 
+const converter = new showdown.Converter();
 const notePath = path.join(__dirname, '../public/notes');
 
-function readDir(dirPath) {
+function mdToHtml(dirPath) {
 	var notes = fs.readdirSync(dirPath);
 	var name;
 	var noteNames = {};
 	for (var i = 0; i < notes.length ; i++) {
 		name = notes[i].slice(0,-3);
-		noteNames[name] = notes[i];
+		fpath = path.join(dirPath, notes[i]);
+		file = fs.readFileSync(fpath, 'utf8');
+		noteNames[name] = converter.makeHtml(file);
 	}
+	console.log('Converted markdown to html')
 	return noteNames
 }
 
@@ -23,15 +27,12 @@ var notes = {
 	title: 'Vim',
 	mainTitle: 'Vim - Main',
 	mainHtml: '',
-	menuItems: readDir(notePath),
-	todoItems:  ['Vim', 'Blog', 'Everything'] };
+	menuItems: mdToHtml(notePath),
+	todoItems:  ['Responsive main', 'Make it look good'] };
 
 
 router.get('/', function(req, res, next) {
-	// var converter = new showdown.Converter();
-	// var rlHtml = converter.makeHtml(rlText);
 	res.render('generic', notes);
 });
-
 
 module.exports = router;

@@ -7,7 +7,7 @@ block content
 	div(class="menu")
 		ul
 			each file, fname in menuItems
-				li: a(class='menuButton' id=file)= fname
+				li: a(class='menuButton' id=fname data=file)= fname
 
 	div(class="main")
 		h1= mainTitle
@@ -17,4 +17,3 @@ block content
 		ul
 			each item in todoItems
 				li= item
-
