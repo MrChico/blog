@@ -1,19 +1,16 @@
 # Blog
 
-
 The purpose of this project is to learn html, css and javascript.
 
 The goal of the project is to write down/script what I am learning in order to, as easy as possible, explain my ideas to others.
 
 
+### Markdown notes -> Blog
 
+1. [x] Read markdown and output as html
+  * Solved through showdown-js
+2. [ ] Make summaries as short html shown in "card"
 
-
-### Notes
-
-* [ ] Display notes 
-
-## Ideas
 
 #### Fancy words
 

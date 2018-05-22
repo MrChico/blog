@@ -127,11 +127,11 @@ html,body {
 }
 
 .content .main {
-	background-color: #08B5B1;
+	/* background-color: #08B5B1; */
 	height: 100%;
 	float: left;
 	width: 56%;
-	padding: 10px;
+	/* padding: 10px; */
 	margin: 0 2%;
 }
 
@@ -152,6 +152,45 @@ html,body {
 	transition: 0.3s;
 }
 
+.summary {
+	background-color: white;
+	padding: 20px;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+
+.summary h1 {
+	text-align: center;
+}
+
+.summary img {
+	float: center;
+	width: 80%;
+	margin: auto;
+}
+
+.read-more-button {
+	border: 2px solid;
+	border-color: #444;
+	background-color: #f1f1f1;
+	display: inline-block;
+	padding:8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap
+}
+
+.read-more-button a {
+	text-decoration: none;
+}
+.read-more-button:hover {
+	border-color: #444;
+	background-color: #ccc;
+}
+
 .card:hover {
 	box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
 }
@@ -166,7 +205,6 @@ img {
 	display: table;
 	clear: both;
 }
-
 
 /* }}} */
 /* -------------- Footer ---------------- {{{ */

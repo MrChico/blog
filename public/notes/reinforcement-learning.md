@@ -1,6 +1,12 @@
 # Reinforcement Learning
+![RL](/images/notes/ReinforcementLearning.png)
 
-## Todo:
+## Introduction
+An **agent** operating in an **environment**, taking **actions** and receiving **rewards**.
+
+Reinforcement Learning notes. 
+
+### Todo:
 
 * Policy Optimization
 * Value Iteration
