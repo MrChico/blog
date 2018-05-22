@@ -1,13 +1,4 @@
 extends layout
 
 block content
-	div(class="menu")
-		ul
-			each i, item in menuItems
-				li: a(class='menuButton' id=item)= i
-
-	div(class="main")
-		h2 main
-
-	div(class="todo")
-		h2 todo
+	div(class="markdown" html=note) 

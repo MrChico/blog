@@ -9,50 +9,50 @@ showdown.setFlavor('github');
 const converter = new showdown.Converter();
 const notePath = path.join(__dirname, '../public/notes');
 
+
 function mdToHtml(dirPath) {
 	var notes = fs.readdirSync(dirPath);
-	var name;
-	var noteNames = {};
+	var summaryMenu = {};
+	var noteHTML = {};
+	var name, fileName;
 	for (var i = 0; i < notes.length ; i++) {
 		if (!fs.statSync(path.join(dirPath, notes[i])).isDirectory()) {
-			var summary = makeSummary(notes[i], dirPath);  // array with name, htmlSummary
-			console.log('name: ' + summary[0]);
-			console.log('lenth of summary: ' + summary[1].length);
-			noteNames[summary[0]] = summary[1];
+			fileName = notes[i];
+			name = fileName.slice(0, -3);   // remove extension .md
+			fpath = path.join(dirPath, fileName);
+			var summary = makeNotes(fpath, name);  // array with name, htmlSummary
+			summaryMenu[name] = summary[0];
+			noteHTML[name] = summary[1];
 		}
 	}
-	return noteNames
+	return [summaryMenu, noteHTML]
 }
 
 
-function makeSummary(fileName, dirPath) {
-	name = fileName.slice(0,-3);   // remove extension .md
-	fpath = path.join(dirPath, fileName);
+function makeNotes(fpath, name) {
 	file = fs.readFileSync(fpath, 'utf8');
+	// complete note
+	var completeHtml = converter.makeHtml(file);  
+
+	// make summary
 	var stop = file.search('\#\#\#');
 	var summary = file.substring(0,stop);
-	
-	// convert text (which is in markdown) to html
 	var summaryHtml = converter.makeHtml(summary);  //string
-	// add summary class and button
-	summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="/note/' + fileName + '"><b>READ MORE »</b></a>';
-	
-	console.log();
-	console.log('name: ' + name);
-	console.log(summaryHtml);
-	console.log(summaryHtml.length);
-	console.log(typeof summaryHtml);
-	return [name, summaryHtml]
+	// add summary class and link
+	summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="/note/' + name + '"><b>READ MORE »</b></a>';
+	return [summaryHtml, completeHtml];
 }
-// var summary = makeSummary(fpath);
-// console.log(summary);
 
+
+var allNotes = mdToHtml(notePath);
+var summaryMenu = allNotes[0];
+var noteHTML = allNotes[1];
 
 var notes = {
-	title: 'Vim',
-	mainTitle: 'Vim - Main',
+	title: 'Notes',
+	mainTitle: 'Main',
 	mainHtml: '',
-	menuItems: mdToHtml(notePath),
+	menuItems: summaryMenu,
 	todoItems:  ['Responsive main', 'Make it look good'] 
 };
 
@@ -60,8 +60,15 @@ router.get('/', function(req, res, next) {
 	res.render('generic', notes);
 });
 
+var f = function() {
+	return {test: "hej", hej: "test"}}
+var { test, hej } = f()
+
 router.get('/:id', function(req, res, next) {
-	res.send(req.params.id);
+	var noteId = req.params.id;
+	var note = noteHTML[req.params.id];
+	// res.render('notes', note );
+	res.send(note);
 });
 
 module.exports = router;
