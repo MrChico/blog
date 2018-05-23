@@ -1,32 +1,38 @@
 /* ---------------------------------------------- */
-.notenav {
-	float: left;
-	width: 25%;
-	background-color: #333;
+
+* {
+	box-sizing: border-box;
 }
 
-.notenav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+html {
+	font-family: Arial;
+	padding: 10px 20px;
+	background: #f1f1f1;
+	height: 100%;
+	margin: auto;
+	max-width: 1500px;
 }
 
-.notenav li a {
-	display: block;
-	color: #f2f2f2;
-	padding: 8px 8px;
-	text-decoration: none;
+body {
+	font-family: Arial;
+	padding: 10px 20px;
+	background: #ddd;
 }
 
-.notenav li a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-.notecontent {
-	float: right;
-	width: 75%;
+h1 {
 	text-align: center;
-	/* height: 1000px; */
-	background-color: #aa9922;
 }
+h2 {
+}
+
+p {
+	text-align: left;
+}
+
+img {
+	max-height: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+

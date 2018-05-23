@@ -13,6 +13,7 @@ var workflow = {
 	},
 	todoItems:  [ 'Vim', 'Blog', 'Everything' ] };
 
+
 var vim = {
 	title: 'Vim',
 	mainTitle: 'Vim - Main',
@@ -20,12 +21,13 @@ var vim = {
 	menuItems: ['Vim', 'Sources', 'Init.vim', 'Plugins'],
 	todoItems:  ['Vim', 'Blog', 'Everything'] };
 
+
 router.get('/', function(req, res, next) {
 	res.render('generic', workflow);
 });
 
 router.get('/vim', function(req, res, next) {
-	res.send(vim);
+	// res.send(vim);
 	res.render('generic', vim);
 });
 

@@ -11,6 +11,7 @@ html,body {
 	margin: auto;
 	max-width: 1500px;
 }
+
 /* }}} */
 /* -------------- HEADER ----------------{{{ */
 .header{
@@ -130,18 +131,18 @@ html,body {
 	/* background-color: #08B5B1; */
 	height: 100%;
 	float: left;
-	width: 56%;
+	width: 76%;
 	/* padding: 10px; */
 	margin: 0 2%;
 }
 
-.content .todo {
+/* .content .todo {
 	background-color: #447744;
 	float: left;
 	height: 100%;
 	width: 20%;
 	padding-left: 10px;
-}
+} */
 
 /* Add a card effect for articles */
 .card {
