@@ -9,15 +9,18 @@ var fs           = require('fs');
 var indexRouter    = require('./routes/index');
 var aboutRouter    = require('./routes/about');
 var notesRouter    = require('./routes/notes');
+var vimRouter      = require('./routes/vim');
+var workflowRouter = require('./routes/workflow');
 var papersRouter   = require('./routes/papers');
 var bookRouter     = require('./routes/books');
-var workflowRouter = require('./routes/workflow');
 
 var app = express();
 
 // view engine setup
+// app.engine('hsb', hbs({ defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+// app.set('view engine', 'hbs');
 
 // Middleware
 app.use(logger('dev'));
@@ -31,6 +34,7 @@ app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/books', bookRouter);
 app.use('/note', notesRouter);
+app.use('/vim', vimRouter);
 app.use('/papers', papersRouter);
 app.use('/workflow', workflowRouter);
 

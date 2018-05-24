@@ -1,19 +1,19 @@
 extends layout
 
 block headscripts
-	script(src="/scripts/generic.js")
+    script(src="/scripts/generic.js")
 
 block content
-	div(class="menu")
-		ul
-			each file, fname in menuItems
-				li: a(class='menuButton' id=fname data=file)= fname
+    div(class="menu")
+        ul
+            each file, fname in menuItems
+                li: a(class='menuButton' id=fname data=file)= fname
 
-	div(class="main")
-		h1= mainTitle
+    div(class="main")
+        h1= mainTitle
 
-	//- div(class="todo")
-	//- 	h1 Todo
-	//- 	ul
-	//- 		each item in todoItems
-	//- 			li= item
+    //- div(class="todo")
+    //- 	h1 Todo
+    //- 	ul
+    //- 		each item in todoItems
+    //- 			li= item

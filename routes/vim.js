@@ -1,13 +1,12 @@
-var express  = require('express');
-var router   = express.Router();
-var path     = require('path');
+var express = require('express');
+var path = require('path');
+var router = express.Router();
 var fs       = require('fs');
 var showdown = require('showdown');
 showdown.setFlavor('github');
 
-// console.log('noteRouter __dirname: ' + __dirname)  // /home/erik/blog/routes
 const converter = new showdown.Converter();
-const notePath = path.join(__dirname, '../public/notes/notes');
+const notePath = path.join(__dirname, '../public/notes/vim');
 const noteHeader = path.join(__dirname, '../public/html/noteHeader.html')
 var headHtml = fs.readFileSync(noteHeader, 'utf8');
 
@@ -17,22 +16,19 @@ function mdToHtml(dirPath) {
         noteHtml = headHtml + noteHtml + '</body></html>';
         return noteHtml
     }
-
     function makeSummary(file, name) {
         var stop = file.search('\#\#\#');
-        var summary = file.substring(0, stop);
+        var summary = file.substring(0,stop);
         var summaryHtml = converter.makeHtml(summary);  //string
         // add summary class and link
-        summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="/note/' + name + '"><b>READ MORE »</b></a>';
+        summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="/vim/' + name + '"><b>READ MORE »</b></a>';
         return summaryHtml
     }
 
     var notes = fs.readdirSync(dirPath);
     var summaryMenu = {};
     var allNoteHtml = {};
-    var name;
-    var fileName;
-
+    var name, fileName;
     for (var i = 0; i < notes.length ; i++) {
         if (!fs.statSync(path.join(dirPath, notes[i])).isDirectory()) {
             fileName = notes[i];
@@ -46,25 +42,27 @@ function mdToHtml(dirPath) {
     return [summaryMenu, allNoteHtml]
 }
 
+var [summaryMenu, allNoteHtml] = mdToHtml(notePath);
 
-var [summaryMenu, noteHtml] = mdToHtml(notePath);
-
-var notes = {
-    title: 'Notes',
-    mainTitle: 'Main',
+var vim = {
+    title: 'Vim',
+    mainTitle: 'Vim - Main',
     mainHtml: '',
-    menuItems: summaryMenu,
-    todoItems:  ['Responsive main', 'Make it look good'] 
+    menuItems: summaryMenu, 
+    mainPug: '<h1> Vim</h1>', 
+    todoItems:  ['Vim', 'Blog', 'Everything'] 
 };
 
 
 router.get('/', function(req, res, next) {
-    res.render('generic', notes);
+    res.render('generic', vim);
 });
 
+
 router.get('/:id', function(req, res, next) {
-    var noteId = req.params.id;
-    var note = noteHtml[noteId];
+    console.log('Id:' + req.params.id)
+    var note = allNoteHtml[req.params.id];
+    console.log('Note:' + note)
     res.send(note);
 });
 
