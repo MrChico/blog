@@ -5,11 +5,17 @@ The purpose of this project is to learn html, css and javascript.
 The goal of the project is to write down/script what I am learning in order to, as easy as possible, explain my ideas to others.
 
 
-### Markdown notes -> Blog
+## Todo
 
-1. [x] Read markdown and output as html
-  * Solved through showdown-js
-2. [ ] Make summaries as short html shown in "card"
+#### dropdown menu for notes
+
+* Notes should become a dropdown menu
+  where one can choose between the
+  different chategories of notes.
+
+* A "frontpage" for notes leading to the
+  chategory pages if dropdown menu is not
+  used.
 
 
 #### Fancy words
@@ -17,7 +23,7 @@ The goal of the project is to write down/script what I am learning in order to, 
 "Fancy words" are words I come across when reading papers and I like the way the phrased something. 
 It can be a single word with the associated meaning or a phrase of words.
 
-This module would show these words in some nice way but also work as a <strong>practice for POST-requests</strong> . I could have
+This module would show these words in some nice way but also work as a <strong>practice</strong>  for <strong>POST-requests</strong> . I could have
 a small file on the server which I could write to in order to make my "fancy words" vocabulary ever increasing.
 
 Nice to have a shortcut on a mobile device to just input a word on the go.
