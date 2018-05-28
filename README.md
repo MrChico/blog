@@ -7,6 +7,11 @@ The goal of the project is to write down/script what I am learning in order to, 
 
 ## Todo
 
+#### Change to CSS grid
+
+* Use firefox for preview (shows grid)
+* [w3school](https://www.w3schools.com/css/css_grid.asp)
+
 #### dropdown menu for notes
 
 * Notes should become a dropdown menu
