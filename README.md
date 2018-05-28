@@ -7,6 +7,13 @@ The goal of the project is to write down/script what I am learning in order to, 
 
 ## Todo
 
+### Automate Notes tab
+
+
+* 
+
+
+
 #### Switch view engine
 
 Jade/Pug is not perfect. I think I prefer to just code in basic html and handlebars is much more similar than pug.

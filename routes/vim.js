@@ -53,11 +53,18 @@ var vim = {
     todoItems:  ['Vim', 'Blog', 'Everything'] 
 };
 
+var home = {
+    title: 'Home',
+    mainTitle: 'Home',
+    mainHtml: '',
+    menuItems: summaryMenu, 
+    mainPug: '<h1> Vim</h1>', 
+    todoItems:  ['Vim', 'Blog', 'Everything'] 
+};
 
 router.get('/', function(req, res, next) {
-    res.render('generic', vim);
+    res.render('generic', home);
 });
-
 
 router.get('/:id', function(req, res, next) {
     console.log('Id:' + req.params.id)
@@ -65,5 +72,6 @@ router.get('/:id', function(req, res, next) {
     console.log('Note:' + note)
     res.send(note);
 });
+
 
 module.exports = router;

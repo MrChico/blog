@@ -34,6 +34,9 @@ app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/books', bookRouter);
 app.use('/note', notesRouter);
+
+// Bake these into one general class
+// Then route to note/:id
 app.use('/vim', vimRouter);
 app.use('/papers', papersRouter);
 app.use('/workflow', workflowRouter);
