@@ -1,42 +1,42 @@
 /* -------------- BODY ----------------{{{ */
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,body {
-	font-family: Arial;
-	padding    : 10px 20px;
-	background : #f1f1f1;
-	height     : 100%;
-	margin     : auto;
-	max-width  : 1500px;
+    font-family: Arial;
+    padding    : 10px 20px;
+    background : #f1f1f1;
+    height     : 100%;
+    margin     : auto;
+    max-width  : 1500px;
 }
 
 /* }}} */
 /* -------------- HEADER ----------------{{{ */
 .header{
-	background   : white;
-	text-align   : center;
-	width        : 100%;
-	margin-left  : auto;
-	margin-right : auto;
-	margin-bottom: 50px;
+    background   : white;
+    text-align   : center;
+    width        : 100%;
+    margin-left  : auto;
+    margin-right : auto;
+    margin-bottom: 50px;
 }
 
 .blog-info {
-	margin: 10px 0;
+    margin: 10px 0;
 
-	@include mobile {
-		float  : none;
-		display: block;
-		margin : 0 auto;
-	}
+    @include mobile {
+        float  : none;
+        display: block;
+        margin : 0 auto;
+    }
 }
 
 .blog-name {
-	padding: 30px 0 0 0;
-	color  : #BBB;
-	cursor : pointer;
+    padding: 30px 0 0 0;
+    color  : #BBB;
+    cursor : pointer;
 }
 
 .blog-name a{
@@ -45,201 +45,202 @@ html,body {
 }
 
 .blog-description {
-	margin: -5px 0;
-	color : gray;
-}
-
-.topnav {
-	overflow        : hidden;
-	background-color: #333;
-	width           : 100%;
-	margin-left     : auto;
-	margin-right    : auto;
-	/* margin: auto; */
-	/* position: relative; */
-	/* bottom: 0px; */
-}
-
-.topnav a {
-	float          : left;
-	display        : block-inline;
-	color          : #f2f2f2;
-	text-align     : center;
-	padding        : 10px 10px;
-	text-decoration: none;
-	border-right   : 1px solid #bbb;
-}
-
-.topnav a:last-child {
-	border-right: none;
-}
-
-.topnav a:hover {
-	background-color: #ddd;
-	color           : black;
+    margin: -5px 0;
+    color : gray;
 }
 
 .profile-pic {
-	margin       : 5px 0px;
-	width        : 100px;
-	height       : 100px;
-	border-radius: 50%;
+    margin       : 5px 0px;
+    width        : 100px;
+    height       : 100px;
+    border-radius: 50%;
 }
 
 .profile:after {
-	content: "";
-	display: table;
-	clear  : both;
+    content: "";
+    display: table;
+    clear  : both;
 }
 
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav li {
+    float: left;
+}
+
+.topnav li a {
+    display: block;
+    background-color: #333;
+}
+
+.topnav li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #666;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 /* }}} */ 
 /* -------------- CONTENT ---------------- {{{ */
 
 .content {
-	margin: auto;
-	width : 100%;
-	height: 70%;
+    margin: auto;
+    width : 100%;
+    height: 70%;
 }
 
 .content .menu {
-	float           : left;
-	height          : 100%;
-	width           : 20%;
-	background-color: #333;
+    float           : left;
+    height          : 100%;
+    width           : 20%;
+    background-color: #333;
 }
 
 .content .menu ul{
-	list-style-type: none;
-	margin         : 0;
-	padding        : 0;
+    list-style-type: none;
+    margin         : 0;
+    padding        : 0;
 }
 
 .content .menu li a{
-	display        : block;
-	color          : #f2f2f2;
-	padding        : 8px 8px;
-	text-decoration: none;
+    display        : block;
+    color          : #f2f2f2;
+    padding        : 8px 8px;
+    background-color: #333;
 }
 
 .content .menu li a:hover{
-	background-color: #ddd;
-	color           : black;
-	cursor          : default;
+    background-color: #ddd;
+    color           : black;
+    cursor          : default;
 }
 
 .content .main {
-	/* background-color: #08B5B1; */
-	height: 100%;
-	float: left;
-	width: 76%;
-	/* padding: 10px; */
-	margin: 0 2%;
+    /* background-color: #08B5B1; */
+    height: 100%;
+    float: left;
+    width: 76%;
+    /* padding: 10px; */
+    margin: 0 2%;
 }
 
 /* .content .todo {
-	background-color: #447744;
-	float: left;
-	height: 100%;
-	width: 20%;
-	padding-left: 10px;
+background-color: #447744;
+float: left;
+height: 100%;
+width: 20%;
+padding-left: 10px;
 } */
 
 /* Add a card effect for articles */
 .card {
-	background-color: white;
-	padding         : 20px;
-	margin-top      : 20px;
-	box-shadow      : 2px 2px 2px 2px rgba(0,0,0,0.2);
-	transition      : 0.3s;
+    background-color: white;
+    padding         : 20px;
+    margin-top      : 20px;
+    box-shadow      : 2px 2px 2px 2px rgba(0,0,0,0.2);
+    transition      : 0.3s;
 }
 
 .card img {
-	display     : block;
-	width       : 70%;
-	margin-left : auto;
-	margin-right: auto;
+    display     : block;
+    width       : 70%;
+    margin-left : auto;
+    margin-right: auto;
 }
 
 .summary {
-	background-color: white;
-	padding         : 20px;
-	box-shadow      : 2px 2px 2px 2px rgba(0,0,0,0.2);
-	transition      : 0.3s;
+    background-color: white;
+    padding         : 20px;
+    box-shadow      : 2px 2px 2px 2px rgba(0,0,0,0.2);
+    transition      : 0.3s;
 }
 
 .summary h1 {
-	text-align: center;
+    text-align: center;
 }
 
 .summary img {
-	float : center;
-	width : 80%;
-	margin: auto;
+    float : center;
+    width : 80%;
+    margin: auto;
 }
 
 .read-more-button {
-	border          : 2px solid;
-	border-color    : #444;
-	background-color: #f1f1f1;
-	display         : inline-block;
-	padding         : 8px 16px;
-	vertical-align  : middle;
-	overflow        : hidden;
-	text-decoration : none;
-	text-align      : center;
-	cursor          : pointer;
-	white-space     : nowrap
+    border          : 2px solid;
+    border-color    : #444;
+    background-color: #f1f1f1;
+    display         : inline-block;
+    padding         : 8px 16px;
+    vertical-align  : middle;
+    overflow        : hidden;
+    text-decoration : none;
+    text-align      : center;
+    cursor          : pointer;
+    white-space     : nowrap
 }
 
 .read-more-button a {
-	text-decoration: none;
+    text-decoration: none;
 }
 .read-more-button:hover {
-	border-color    : #444;
-	background-color: #ccc;
+    border-color    : #444;
+    background-color: #ccc;
 }
 
 .card:hover {
-	box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 /* Clear floats after the columns */
 .row:after {
-	content: "";
-	display: table;
-	clear  : both;
+    content: "";
+    display: table;
+    clear  : both;
 }
 
 /* }}} */
 /* -------------- Footer ---------------- {{{ */
 .footer{
-	background: #DDD;
-	text-align: center;
-	margin-top: 20px;
-	/* width: 100%; */
-	/* margin-left: auto; */
-	/* margin-right: auto; */
-	/* margin-bottom: 50px; */
-}
-/* }}} */
-/* -------------- Responsive ---------------- {{{ */
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-        width  : 100%;
-        padding: 0;
-    }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-    .topnav a {
-        float: none;
-        width: 100%;
-    }
+    background: #DDD;
+    text-align: center;
+    margin-top: 20px;
 }
 /* }}} */

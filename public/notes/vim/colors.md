@@ -5,12 +5,7 @@
 ## Introduction
 
 I started exploring how to make a theme for [Oni](https://github.com/onivim/oni). I wanted to make 
-the sublime inspired monokai theme. 
-
-
-###  How
-
-In Oni a theme is defined as below:
+the sublime inspired monokai theme. In order to make a theme in Oni one creates a folder structure with:
 
 ```bash
 ./theme-monokai
@@ -20,3 +15,7 @@ In Oni a theme is defined as below:
 ├── install.sh
 └── package.json
 ```
+This theme is available at [theme-monokai](https://github.com/ErikEkstedt/.files/tree/master/oni/theme-monokai).
+
+###  How
+

@@ -1,32 +1,28 @@
 extends layout
 
 block headscripts 
-	script(src="/scripts/index.js")
+  script(src="/scripts/index.js")
 
 block styles
-	link(rel='stylesheet', href='/styles/index.css')
+  link(rel='stylesheet', href='/styles/index.css')
 
 block content
-	div(class='row')
-		div(class='leftcolumn')
-
-			div(class='card')
-				h1 Notes
-				a(href="/note") Read more
-
-			div(class='card')
-				h1 Workflow
-				img(src="images/workflow_latest.png")
-				h5 Trello | Vim  |  browser/html/markdown/pdf</h5>
-				p Workflow has become a word of large importance both in a professional but also for pleasure. Workflow is everything. What do you do during a day? Thats your workflow.  Workflow is a nice concept because it is what you want to design/produce/understand, the reason why to design/produce/understand and the tool to design/produce/understand.
-				a(href="/workflow") Read more
-
-			div(class='card')
-				h1 Notes
-				a(href="/note") Read more
-
-		div(class='rightcolumn')
-			div(class='card about')
-				h2(class="about") About me
-				img(src="images/Erik.jpg" class="about")
-				p Hellloooo!
+  div(class='row')
+    div(class='leftcolumn')
+      div(class='card')
+        h1 Notes
+        a(href="/note") Read more
+      div(class='card')
+        h1 Workflow
+        img(src="images/workflow_latest.png")
+        h5 Trello | Vim  |  browser/html/markdown/pdf</h5>
+        p Workflow has become a word of large importance both in a professional but also for pleasure. Workflow is everything. What do you do during a day? Thats your workflow.  Workflow is a nice concept because it is what you want to design/produce/understand, the reason why to design/produce/understand and the tool to design/produce/understand.
+        a(href="/workflow") Read more
+      div(class='card')
+        h1 Notes
+        a(href="/note") Read more
+    div(class='rightcolumn')
+      div(class='card about')
+        h2(class="about") About me
+        img(src="images/Erik.jpg" class="about")
+        p Hellloooo!

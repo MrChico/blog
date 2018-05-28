@@ -1,20 +1,20 @@
 # Plugins
 ## Introduction
 
-I use [vim-plug](https://github.com/junegunn/vim-plug) to handle my plugins. It is easy to use and handles updates/install and cleaning in a user friendly way.
+I use [vim-plug](https://github.com/junegunn/vim-plug) to handle my plugins. It is easy to use and handles updates, installs and cleaning in a user friendly way. 
 
 
-## Autocompletion
+### Autocompletion
 [deoplete.nvim](https://github.com/Shougo/deoplete.nvim)
 [deoplete-jedi](https://github.com/zchee/deoplete-jedi)
 [neco-vim](https://github.com/Shougo/neco-vim)
 [neopairs.vim](https://github.com/Shougo/neopairs.vim)
 
-##  Snippets
+###  Snippets
 [ultisnips](https://github.com/SirVer/ultisnips)
 [vim-snippets](https://github.com/honza/vim-snippets)
 
-##  Tools
+###  Tools
 [vim-obsession](https://github.com/tpope/vim-obsession)
 [vim-fugitive](https://github.com/tpope/vim-fugitive)
 [vim-commentary](https://github.com/tpope/vim-commentary)
@@ -46,7 +46,7 @@ I use [vim-plug](https://github.com/junegunn/vim-plug) to handle my plugins. It 
 [ale](https://github.com/w0rp/ale)
 [targets.vim](https://github.com/wellle/targets.vim)
 
-##  Syntax
+###  Syntax
 [vim-polyglot](https://github.com/sheerun/vim-polyglot)
 [vim-matlab](https://github.com/daeyun/vim-matlab)
 [xml.vim](https://github.com/othree/xml.vim)
@@ -56,7 +56,7 @@ I use [vim-plug](https://github.com/junegunn/vim-plug) to handle my plugins. It 
 [delimitMate](https://github.com/Raimondi/delimitMate)
 [lexima.vim](https://github.com/cohama/lexima.vim)
 
-##   Preview Text
+###   Preview Text
 [vimtex](https://github.com/lervag/vimtex)
 [vim-livedown](https://github.com/shime/vim-livedown)
 
