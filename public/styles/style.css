@@ -199,6 +199,16 @@ padding-left: 10px;
     margin: auto;
 }
 
+.readMore {
+    border          : 2px solid;
+    border-color    : #444;
+    background-color: #ee7290;
+}
+
+.readMore:hover {
+    border-color    : #444;
+    background-color: #ccc;
+}
 .read-more-button {
     border          : 2px solid;
     border-color    : #444;
@@ -216,6 +226,7 @@ padding-left: 10px;
 .read-more-button a {
     text-decoration: none;
 }
+
 .read-more-button:hover {
     border-color    : #444;
     background-color: #ccc;

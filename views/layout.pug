@@ -3,6 +3,8 @@ html
   head
     title= title
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+
+    script(src="/scripts/layout.js")
     link(rel='stylesheet', href='/styles/style.css')
     block headscripts
     block styles
@@ -11,17 +13,22 @@ html
       div(class='blog-info')
         h1(class='blog-name'): a(href="/") Erik Ekstedt
         p(class='blog-description') I am interested in AI and minds
+
       ul(class='topnav')
         li: a(href="/") Home
         li(class="dropdown") 
           a(class=dropbtn) Notes
           div(class="dropdown-content")
             a(href="/note") Notes 
-            a(href="/workflow") Workflow
-            a(href="/vim") Vim
+            a(href="/note/workflow") Workflow
+            a(href="/note/programming") Programming
+            a(href="/note/vim") Vim
+            a(href="/note/interesting") Interesting
+            a(href="/note/training") Training
         li: a(href="/papers") Papers
         li: a(href="/books") Books
         li(style="float:right"): a(href="/about") About
+        li(style="float:right"): a(href="/fancywords") Fancy words
 
     div(class='content')
       block content

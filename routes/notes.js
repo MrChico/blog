@@ -13,21 +13,25 @@ showdown.setFlavor('github');
 
 const converter = new showdown.Converter();
 const noteHeader = path.join(__dirname, '../public/html/noteHeader.html')
+const notePath = path.join(__dirname, '../public/notes/');
 var headHtml = fs.readFileSync(noteHeader, 'utf8');
 
-function mdToHtml(dirPath) {
+function mdToHtml(id) {
+    const dirPath = path.join(notePath, id);
+
     function makeCompleteNote(file) {
         var noteHtml = converter.makeHtml(file);  
         noteHtml = headHtml + noteHtml + '</body></html>';
         return noteHtml
     }
 
-    function makeSummary(file, name) {
+    function makeSummary(file, dirName, fileName) {
         var stop = file.search('\#\#\#');
         var summary = file.substring(0, stop);
         var summaryHtml = converter.makeHtml(summary);  //string
         // add summary class and link
-        summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="/note/' + name + '"><b>READ MORE »</b></a>';
+        var routerPath = path.join('/note', dirName, fileName)
+        summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="' + routerPath + '"><b>READ MORE »</b></a>';
         return summaryHtml
     }
 
@@ -37,107 +41,67 @@ function mdToHtml(dirPath) {
     var name;
     var fileName;
 
+    // notes.forEach( note => {console.log('forEach note: '+note)} );
+
     for (var i = 0; i < notes.length ; i++) {
         if (!fs.statSync(path.join(dirPath, notes[i])).isDirectory()) {
             fileName = notes[i];
             name = fileName.slice(0, -3);   // remove extension .md
             fpath = path.join(dirPath, fileName);
             file = fs.readFileSync(fpath, 'utf8');
-            summaryMenu[name] = makeSummary(file, name);
+            summaryMenu[name] = makeSummary(file, id, name);
             allNoteHtml[name] = makeCompleteNote(file);
         }
     }
     return [summaryMenu, allNoteHtml]
 }
 
-// console.log('noteRouter __dirname: ' + __dirname)  // /home/erik/blog/routes
-
-
-
-
-function getPage(id) {
-    const notePath = path.join(__dirname, '../public/notes/'+id);
-    return mdToHtml(notePath); 
+function getMainHtml(id){
+    const htmlPath = path.join(__dirname, '../public/html', id + '.html');
+    if (fs.existsSync(htmlPath)) {
+        var html = fs.readFileSync(htmlPath, 'utf8');
+    }
+    return html
 }
-var [summaryMenu, noteHtml] = getPage()
 
-function getPageContent(id) {
-    // id is string
+function getPageData(id) {
+    var [summaryMenu, noteHtml] = mdToHtml(id); 
     var notes = {
         title: id,
         mainTitle: id,
-        mainHtml: '',
+        mainHtml: getMainHtml(id),
         menuItems: summaryMenu,
-        todoItems:  ['Responsive main', 'Make it look good'] 
+        fullNotes: noteHtml,
     };
     return notes
-
 }
-var page = getPageContent(id)
 
-// vad ska hända i router vim, notes, workflow
-// var = vimNoteWFProgrammingTrainingFancywords
-//
 
+// frontPage for notes where all subchategories should be listed
+// summary cards from all?
 router.get('/', function(req, res, next) {
-    res.render('generic', page);
+    var pageData = getPageData('notes')
+    res.render('generic', pageData);
 });
 
+
+// regular notePage for specific subchategory
+// workflow, vim, programming, notes, training
 router.get('/:id', function(req, res, next) {
-    var noteId = req.params.id;
-    var noteChategory(notId);
-    var note = noteHtml[noteId];
-    //which former router to call
-    res.render(noteId);
+    var pageData = getPageData(req.params.id)
+    res.render('generic', pageData);
 });
 
-router.get('/:pageId/:noteId', function(req, res, next) {
-    var noteId = req.params.pageId.noteId;
-    console.log('noteId', noteId);
-    var note = noteHtml[noteId];
-    var vim = {
-        title: 'Vim',
-        mainTitle: 'Vim - Main',
-        mainHtml: '',
-        menuItems: summaryMenu, 
-        mainPug: '<h1> Vim</h1>', 
-        todoItems:  ['Vim', 'Blog', 'Everything'] 
-    };
-    var home = {
-        title: 'Home',
-        mainTitle: 'Home',
-        mainHtml: '',
-        menuItems: summaryMenu, 
-        mainPug: '<h1> Vim</h1>', 
-        todoItems:  ['Vim', 'Blog', 'Everything'] 
-    };
-    var notes = {
-        title: 'Notes',
-        mainTitle: 'Main',
-        mainHtml: '',
-        menuItems: summaryMenu,
-        todoItems:  ['Responsive main', 'Make it look good'] 
-    };
-    var workflow = {
-        title: 'Workflow',
-        mainTitle: 'Workflow - Main',
-        mainHtml: '',
-        menuItems: summaryMenu, 
-        mainPug: '<h1> Vim</h1>', 
-        todoItems:  ['Vim', 'Blog', 'Everything'] 
-    };
-    var dummyVar = notes
 
-    // var noteChategory(notId);
-    // console.log('noteChategory', noteId);
-    //which former router to call
-    res.render('generic', dummyVar);
-    // res.render('generic', page);
-});
-router.get('/:id', function(req, res, next) {
-    console.log('Id:' + req.params.id)
-
-    res.render('generic', notes);
+router.get('/:id/:note', function(req, res, next) {
+    var id = req.params.id;
+    var note = req.params.note;
+    var pageData = getPageData(req.params.id);
+    var fullNotes = pageData['fullNotes']
+    var page = fullNotes[note]
+    console.log('Browsing: ' + path.join('/note', id, note));
+    // console.log('Id: ' + id + '\nnote: ' + note + '\npage: ' + typeof page);
+    res.send(page);
 });
 
 module.exports = router;

@@ -1,0 +1,28 @@
+{
+  "interesting": [
+    "Interesting.md"
+  ],
+  "notes": [
+    "CLEVR.md",
+    "Jeff-Hawking-Interview.md",
+    "NN-that-can-reason.md",
+    "reinforcement-learning.md"
+  ],
+  "programming": [
+    "javascript.md",
+    "machine-learning.md",
+    "mycroft.md"
+  ],
+  "training": [
+    "progress.md",
+    "training.md"
+  ],
+  "vim": [
+    "colors.md",
+    "mappings.md",
+    "plugins.md"
+  ],
+  "workflow": [
+    "workflow.md"
+  ]
+}

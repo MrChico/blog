@@ -6,15 +6,36 @@ var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
 var fs           = require('fs');
 
-var indexRouter    = require('./routes/index');
-var aboutRouter    = require('./routes/about');
-var notesRouter    = require('./routes/notes');
-var vimRouter      = require('./routes/vim');
-var workflowRouter = require('./routes/workflow');
-var papersRouter   = require('./routes/papers');
-var bookRouter     = require('./routes/books');
+var indexRouter      = require('./routes/index');
+var aboutRouter      = require('./routes/about');
+var notesRouter      = require('./routes/notes');
+var fancyWordsRouter = require('./routes/fancywords');
+var papersRouter     = require('./routes/papers');
+var bookRouter       = require('./routes/books');
 
 var app = express();
+
+function writeNoteDirsToFile(dir) {
+    // Simple, non robust function to store the directories and files
+    // in the notes folder
+    var results = {};
+    files = fs.readdirSync(dir);
+    files.forEach(function(file) {
+        filepath = path.resolve(dir, file);
+        // the prefix '?' indicates folders which should not be shown in blog
+        if (fs.statSync(filepath).isDirectory() && file[0] !=='?') {
+            // results.push(file)
+            results[file] = fs.readdirSync(filepath)
+        } 
+    });
+    let data = JSON.stringify(results, null, 2);  
+    fs.writeFileSync('./public/data/menu-notes.json', data);  
+    return results
+};
+
+const notePath = path.join(__dirname, '/public/notes/');
+writeNoteDirsToFile(notePath);
+
 
 // view engine setup
 // app.engine('hsb', hbs({ defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));
@@ -31,15 +52,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', indexRouter);
-app.use('/about', aboutRouter);
-app.use('/books', bookRouter);
 app.use('/note', notesRouter);
-
-// Bake these into one general class
-// Then route to note/:id
-app.use('/vim', vimRouter);
+app.use('/books', bookRouter);
 app.use('/papers', papersRouter);
-app.use('/workflow', workflowRouter);
+app.use('/about', aboutRouter);
+app.use('/fancywords', fancyWordsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
