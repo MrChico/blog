@@ -16,7 +16,19 @@ html {
 body {
     font-family: Arial;
     padding: 10px 20px;
-    background: #ddd;
+    background: white;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #F6F8FA;
+}
+
+pre code {
+    background-color: #F6F8FA;
+    border: 1px solid #99a;
+    display: block;
+    padding: 20px;
 }
 
 h1 {
