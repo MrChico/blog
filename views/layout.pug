@@ -5,19 +5,27 @@ html
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
 
     script(src="/scripts/layout.js")
-    link(rel='stylesheet', href='/styles/style.css')
+    link(rel='stylesheet' href='/styles/style.css')
+    link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
     block headscripts
     block styles
   body
-    div(class='header')
-      div(class='blog-info')
-        h1(class='blog-name'): a(href="/") Erik Ekstedt
-        p(class='blog-description') I am interested in AI and minds
+    // header(class='header')
+    header(class="w3-display-container w3-content w3-center" style="max-width:1500px")
+      img(class="w3-image" src="/images/universe.jpg" alt="Me" width="1500" height="400")
+      div(class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center")
+        h1(class="w3-hide-medium w3-hide-small w3-xxxlarge") Erik Ekstedt
+        h5(class="w3-hide-large" style="white-space:nowrap") Erik Ekstedt
+        h3(class="w3-hide-medium w3-hide-small") PhD. candidate
+
+      // div(class='blog-info')
+      //   h1(class='blog-name'): a(href="/") Erik Ekstedt
+      //   p(class='blog-description') I am interested in AI and minds
 
       ul(class='topnav')
         li: a(href="/") Home
-        li(class="dropdown") 
-          a(class=dropbtn) Notes
+        li(class="dropdown")
+          a(class="dropbtn" href="/note") Notes
           div(class="dropdown-content")
             a(href="/note") Notes 
             a(href="/note/workflow") Workflow
@@ -33,5 +41,6 @@ html
     div(class='content')
       block content
 
-    div(class='footer')
-      a(href='https://www.github.com/ErikEkstedt'): img(src="/icons/github.svg" style="width: 100px")
+    footer(class='footer')
+      a(href='https://www.github.com/ErikzEkstedt'): img(src="/icons/github.svg" style="width: 100px")
+      // div(class='footer')
