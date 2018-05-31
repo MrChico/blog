@@ -1,0 +1,63 @@
+.index-container {
+    /* Small screens */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template:
+        "cards"
+        "about";
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+@media (min-width: 500px) {
+    /* Large screens */
+    .index-container {
+        grid-template:
+            "cards about";
+        grid-template-columns: auto minmax(200px, 400px);
+    }
+}
+
+.grid-interesting {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 10px;
+    background: black;
+    background: #333;
+    min-width: 100px;
+    max-width: 400px;
+    overflow: auto;
+    max-height: 1000px;
+}
+
+.grid-interesting .card {
+    text-align: center;
+    background: aqua;
+    color: black;
+    padding:20px;
+    margin: 10px;
+}
+
+.grid-blog {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+    background: black;
+    overflow: auto;
+    max-height: 1000px;
+}
+
+.grid-blog .card {
+    text-align: center;
+    background: darkgoldenrod;
+    color: black;
+    min-width: 350px;
+    max-width: 750px;
+    min-height: 450px;
+    max-height: 800px;
+    padding:20px;
+    margin: 10px;
+}
+

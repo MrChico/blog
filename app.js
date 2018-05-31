@@ -5,13 +5,16 @@ var path         = require('path');
 var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
 var fs           = require('fs');
+var hbs           = require('express-handlebars');
+
 
 var indexRouter      = require('./routes/index');
 var aboutRouter      = require('./routes/about');
 var notesRouter      = require('./routes/notes');
-var fancyWordsRouter = require('./routes/fancywords');
-var papersRouter     = require('./routes/papers');
-var bookRouter       = require('./routes/books');
+
+// var fancyWordsRouter = require('./routes/fancywords');
+// var papersRouter     = require('./routes/papers');
+// var bookRouter       = require('./routes/books');
 
 var app = express();
 
@@ -36,10 +39,10 @@ function writeNoteDirsToFile(dir) {
 
 
 // view engine setup
-// app.engine('hsb', hbs({ defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));
+app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-// app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
+// app.set('view engine', 'pug');
 
 // Middleware
 app.use(logger('dev'));
@@ -51,10 +54,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', indexRouter);
 app.use('/note', notesRouter);
-app.use('/books', bookRouter);
-app.use('/papers', papersRouter);
 app.use('/about', aboutRouter);
-app.use('/fancywords', fancyWordsRouter);
+
+// app.use('/books', bookRouter);
+// app.use('/papers', papersRouter);
+// app.use('/fancywords', fancyWordsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

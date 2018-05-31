@@ -79,29 +79,35 @@ function getPageData(id) {
 
 // frontPage for notes where all subchategories should be listed
 // summary cards from all?
-router.get('/', function(req, res, next) {
-    var pageData = getPageData('notes')
-    res.render('generic', pageData);
-});
+// router.get('/', function(req, res, next) {
+//     var pageData = getPageData('notes')
+//     res.render('generic', pageData);
+// });
 
 
 // regular notePage for specific subchategory
 // workflow, vim, programming, notes, training
-router.get('/:id', function(req, res, next) {
-    var pageData = getPageData(req.params.id)
-    res.render('generic', pageData);
-});
+// router.get('/:id', function(req, res, next) {
+//     var pageData = getPageData(req.params.id)
+//     res.render('generic', pageData);
+// });
 
 
-router.get('/:id/:note', function(req, res, next) {
-    var id = req.params.id;
-    var note = req.params.note;
-    var pageData = getPageData(req.params.id);
-    var fullNotes = pageData['fullNotes']
-    var page = fullNotes[note]
-    console.log('Browsing: ' + path.join('/note', id, note));
-    // console.log('Id: ' + id + '\nnote: ' + note + '\npage: ' + typeof page);
-    res.send(page);
+// router.get('/:id/:note', function(req, res, next) {
+//     var id = req.params.id;
+//     var note = req.params.note;
+//     var pageData = getPageData(req.params.id);
+//     var fullNotes = pageData['fullNotes']
+//     var page = fullNotes[note]
+//     console.log('Browsing: ' + path.join('/note', id, note));
+//     // console.log('Id: ' + id + '\nnote: ' + note + '\npage: ' + typeof page);
+//     res.send(page);
+// });
+
+
+// GRID + HANDLEBARS
+router.get('/', function(req, res, next) {
+	res.render('layouts/notes', {title: 'Notes'}); 
 });
 
 module.exports = router;

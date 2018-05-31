@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/styles/gridstyle.css'> 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='/styles/gridlayout.css'> 
+    <title> {{title}} </title>
   </head>
   <body>
     <div class="grid-body">
 
       <!-- Header -->
       <header class="header">
-        <img class="image" src="/images/universe.jpg" alt="universe">
+        <img class="header-image" src="/images/universe.jpg" alt="universe">
 
         <!-- <1!-- Blog title --1> -->
         <!-- <div class="header-text"> -->
@@ -29,16 +29,18 @@
           </div>
       </header>
 
-      <div class="content"> 
-        <h1>Page Content</h1> 
+      <div class="content">
+
+        {{{ body }}}
+
       </div>
 
       <div class="footer"> 
         <a href='https://www.github.com/ErikEkstedt'>
           <img src="/icons/github.svg" style="width: 100px">
+        </a>
       </div>
+
     </div>
-
-
-    </body>
-  </html>
+  </body>
+</html>
