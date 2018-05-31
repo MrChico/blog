@@ -107,7 +107,7 @@ function getPageData(id) {
 
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
-	res.render('layouts/notes', {title: 'Notes'}); 
+	res.render('notes', {title: 'Notes'}); 
 });
 
 module.exports = router;

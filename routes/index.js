@@ -14,7 +14,7 @@ var router = express.Router();
 
 // handlebars
 router.get('/', function(req, res, next) {
-	res.render('layouts/index', {title: 'Blog'}); 
+	res.render('index', {title: 'Blog'}); 
 });
 
 // // grid. Plain HTML

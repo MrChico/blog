@@ -1,20 +1,15 @@
-// Created by express
 var createError  = require('http-errors');
 var express      = require('express');
 var path         = require('path');
 var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
 var fs           = require('fs');
-var hbs           = require('express-handlebars');
+var hbs          = require('express-handlebars');
 
-
+// Routes
 var indexRouter      = require('./routes/index');
 var aboutRouter      = require('./routes/about');
 var notesRouter      = require('./routes/notes');
-
-// var fancyWordsRouter = require('./routes/fancywords');
-// var papersRouter     = require('./routes/papers');
-// var bookRouter       = require('./routes/books');
 
 var app = express();
 
@@ -37,12 +32,10 @@ function writeNoteDirsToFile(dir) {
 };
 // writeNoteDirsToFile(path.join(__dirname, '/public/notes/'));
 
-
 // view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-// app.set('view engine', 'pug');
 
 // Middleware
 app.use(logger('dev'));
@@ -56,9 +49,6 @@ app.use('/', indexRouter);
 app.use('/note', notesRouter);
 app.use('/about', aboutRouter);
 
-// app.use('/books', bookRouter);
-// app.use('/papers', papersRouter);
-// app.use('/fancywords', fancyWordsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
