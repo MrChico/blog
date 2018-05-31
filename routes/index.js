@@ -7,8 +7,15 @@ var router = express.Router();
 // 	res.sendFile(path.join(__dirname, '../views/index.html'))
 // });
 
+// router.get('/', function(req, res, next) {
+// 	res.render('index', {title: 'Blog'}); 
+// });
+
+
+// grid
 router.get('/', function(req, res, next) {
-	res.render('index', {title: 'Blog'}); 
+    var filePath = path.join(__dirname, '../views/layout.html');
+	res.sendFile(filePath);
 });
 
 module.exports = router;
