@@ -1,20 +1,17 @@
 var express  = require('express');
 var router   = express.Router();
 var path     = require('path');
+var util     = require('util');
 var fs       = require('fs');
+var glob     = require('glob');
 var showdown = require('showdown');
 showdown.setFlavor('github');
-
-// TODO
-// The only router that handles all the code for
-// the tab "Notes" in .header.navbar
-// Combine /vim, /workflow,  /notes router
-// functions
 
 const converter = new showdown.Converter();
 const noteHeader = path.join(__dirname, '../public/html/noteHeader.html')
 const notePath = path.join(__dirname, '../public/notes/');
-var headHtml = fs.readFileSync(noteHeader, 'utf8');
+const headHtml = fs.readFileSync(noteHeader, 'utf8');
+
 
 function mdToHtml(id) {
     const dirPath = path.join(notePath, id);
@@ -42,7 +39,6 @@ function mdToHtml(id) {
     var fileName;
 
     // notes.forEach( note => {console.log('forEach note: '+note)} );
-
     for (var i = 0; i < notes.length ; i++) {
         if (!fs.statSync(path.join(dirPath, notes[i])).isDirectory()) {
             fileName = notes[i];
@@ -56,58 +52,38 @@ function mdToHtml(id) {
     return [summaryMenu, allNoteHtml]
 }
 
-function getMainHtml(id){
-    const htmlPath = path.join(__dirname, '../public/html', id + '.html');
-    if (fs.existsSync(htmlPath)) {
-        var html = fs.readFileSync(htmlPath, 'utf8');
-    }
-    return html
+function getFilesAndPaths(dir) {
+    var name, fp;
+    var allNotes = {};
+    var files = glob.sync("**/*.md", {cwd: notePath});
+    files.forEach( function(f) {
+        // fp = f.split(path.sep)
+        name = f.split(path.sep).pop(); // [-1];
+        allNotes[name] = '/note/' + f;
+    });
+    return(allNotes)
 }
 
-function getPageData(id) {
-    var [summaryMenu, noteHtml] = mdToHtml(id); 
-    var notes = {
-        title: id,
-        mainTitle: id,
-        mainHtml: getMainHtml(id),
-        menuItems: summaryMenu,
-        fullNotes: noteHtml,
-    };
-    return notes
-}
-
-
-// frontPage for notes where all subchategories should be listed
-// summary cards from all?
-// router.get('/', function(req, res, next) {
-//     var pageData = getPageData('notes')
-//     res.render('generic', pageData);
-// });
-
-
-// regular notePage for specific subchategory
-// workflow, vim, programming, notes, training
-// router.get('/:id', function(req, res, next) {
-//     var pageData = getPageData(req.params.id)
-//     res.render('generic', pageData);
-// });
-
-
-// router.get('/:id/:note', function(req, res, next) {
-//     var id = req.params.id;
-//     var note = req.params.note;
-//     var pageData = getPageData(req.params.id);
-//     var fullNotes = pageData['fullNotes']
-//     var page = fullNotes[note]
-//     console.log('Browsing: ' + path.join('/note', id, note));
-//     // console.log('Id: ' + id + '\nnote: ' + note + '\npage: ' + typeof page);
-//     res.send(page);
-// });
-
+var allNotes = getFilesAndPaths(notePath);
+console.log(util.inspect(allNotes, false, null))
 
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
-	res.render('notes', {title: 'Notes'}); 
+	// res.render('notes', {title: 'Notes'}); 
+	res.render('notes', {data: allNotes, title: "Notes", article: ''});
+});
+
+// Lol 
+// My next rookie step will be to save all html to file in /public/html
+// then have jquery set the correct html from the client side
+router.get('/:dir/:id', function(req, res, next) {
+	// res.render('notes', {title: 'Notes'}); 
+	// res.render('notes', {data: allNotes, title: "Notes"});
+    var filepath = path.join(req.params.dir, req.params.id);
+    filepath = path.join(notePath, filepath );
+    var file = fs.readFileSync(filepath, 'utf8');
+    var fileHtml = converter.makeHtml(file);  
+	res.render('notes', {data: allNotes, title: "Notes", article: fileHtml});
 });
 
 module.exports = router;

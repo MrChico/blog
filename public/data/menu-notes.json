@@ -9,8 +9,10 @@
     "reinforcement-learning.md"
   ],
   "programming": [
+    "blog.md",
     "javascript.md",
     "machine-learning.md",
+    "mopidy.md",
     "mycroft.md"
   ],
   "training": [
