@@ -6,9 +6,10 @@
 <body>
   <div class="sidenav" id="menu">
     <ul>
-      <li><a class="test-item">TEST</a> </li>
+      <li><a class="test-item" id=''>TEST</a> </li>
       {{#each data}}
-        <li><a class="menu-item" href={{this}} >{{@key}}</a> </li>
+        <!-- <li><a class="menu-item" href={{this}} >{{@key}}</a> </li> -->
+        <li><a class="menu-item" id={{this}} >{{@key}}</a> </li>
       {{/each}}
     </ul>
   </div>

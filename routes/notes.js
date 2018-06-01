@@ -14,14 +14,11 @@ const headHtml = fs.readFileSync(noteHeader, 'utf8');
 
 
 function mdToHtml(id) {
-    const dirPath = path.join(notePath, id);
-
     function makeCompleteNote(file) {
         var noteHtml = converter.makeHtml(file);  
         noteHtml = headHtml + noteHtml + '</body></html>';
         return noteHtml
     }
-
     function makeSummary(file, dirName, fileName) {
         var stop = file.search('\#\#\#');
         var summary = file.substring(0, stop);
@@ -32,12 +29,14 @@ function mdToHtml(id) {
         return summaryHtml
     }
 
+    console.log('!!! mkToHtml')
+    const dirPath = path.join(notePath, id);
     var notes = fs.readdirSync(dirPath);
+    console.log('!!! mkToHtml2')
     var summaryMenu = {};
     var allNoteHtml = {};
     var name;
     var fileName;
-
     // notes.forEach( note => {console.log('forEach note: '+note)} );
     for (var i = 0; i < notes.length ; i++) {
         if (!fs.statSync(path.join(dirPath, notes[i])).isDirectory()) {
@@ -67,8 +66,6 @@ function getFilesAndPaths(dir) {
 var allFilesAndPaths = getFilesAndPaths(notePath);
 console.log(util.inspect(allFilesAndPaths, false, null))
 
-
-
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
 	// res.render('notes', {title: 'Notes'}); 
@@ -92,17 +89,18 @@ router.get('/', function(req, res, next) {
 // menu-items makes requests from client jquery
 // should return the requested html
 // to be set in main window of :/note
-router.get('/:id', (req, res) => {
-    var id = '/interesting/' + req.params.id;
+router.get('/*', (req, res) => {
+    var id = req.path;
     console.log('Id: ' + id);
+    // console.log('req.parmas: ' + req.path);
     var [summary, html] = mdToHtml(id);
+    console.log('html: ' + html);
+    console.log('html: ' + summary);
+    console.log('hej');
+
     // console.log('html: ' + html);
 	// res.send(html['allNoteHtml']);
-
-	// res.sendFile(noteHeader);
-	res.send(allFilesAndPaths);
-    // TODO
-	// res.send(idhtml);
+	res.send(allFilesAndPaths[id]);
 });
 
 // router.get('/:id', function(req, res, next) {
