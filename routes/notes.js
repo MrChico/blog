@@ -54,36 +54,63 @@ function mdToHtml(id) {
 
 function getFilesAndPaths(dir) {
     var name, fp;
-    var allNotes = {};
+    var allFilesAndPaths = {};
     var files = glob.sync("**/*.md", {cwd: notePath});
     files.forEach( function(f) {
         // fp = f.split(path.sep)
         name = f.split(path.sep).pop(); // [-1];
-        allNotes[name] = '/note/' + f;
+        allFilesAndPaths[name] = '/note/' + f;
     });
-    return(allNotes)
+    return(allFilesAndPaths)
 }
 
-var allNotes = getFilesAndPaths(notePath);
-console.log(util.inspect(allNotes, false, null))
+var allFilesAndPaths = getFilesAndPaths(notePath);
+console.log(util.inspect(allFilesAndPaths, false, null))
+
+
 
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
 	// res.render('notes', {title: 'Notes'}); 
-	res.render('notes', {data: allNotes, title: "Notes", article: ''});
+	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: ''});
 });
 
 // Lol 
 // My next rookie step will be to save all html to file in /public/html
 // then have jquery set the correct html from the client side
-router.get('/:dir/:id', function(req, res, next) {
-	// res.render('notes', {title: 'Notes'}); 
-	// res.render('notes', {data: allNotes, title: "Notes"});
-    var filepath = path.join(req.params.dir, req.params.id);
-    filepath = path.join(notePath, filepath );
-    var file = fs.readFileSync(filepath, 'utf8');
-    var fileHtml = converter.makeHtml(file);  
-	res.render('notes', {data: allNotes, title: "Notes", article: fileHtml});
+// router.get('/:dir/:id', function(req, res, next) {
+// 	// res.render('notes', {title: 'Notes'}); 
+// 	// res.render('notes', {data: allFilesAndPaths, title: "Notes"});
+//     var filepath = path.join(req.params.dir, req.params.id);
+//     filepath = path.join(notePath, filepath );
+//     var file = fs.readFileSync(filepath, 'utf8');
+//     var fileHtml = converter.makeHtml(file);  
+// 	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: fileHtml});
+// });
+
+// TODO
+// menu-items makes requests from client jquery
+// should return the requested html
+// to be set in main window of :/note
+router.get('/:id', (req, res) => {
+    var id = '/interesting/' + req.params.id;
+    console.log('Id: ' + id);
+    var [summary, html] = mdToHtml(id);
+    // console.log('html: ' + html);
+	// res.send(html['allNoteHtml']);
+
+	// res.sendFile(noteHeader);
+	res.send(allFilesAndPaths);
+    // TODO
+	// res.send(idhtml);
 });
+
+// router.get('/:id', function(req, res, next) {
+     
+//     // Want to send back html file from notes
+//     // used by jquery on client
+//     console.log('SendFile');
+// 	res.sendFile(noteHeader);
+// });
 
 module.exports = router;

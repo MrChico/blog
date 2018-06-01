@@ -3,6 +3,35 @@
 ## Interesting talks
 Here are some casual notes taken during interesting youtube talks and so on...
 
+--------------------
+### [Karl Friston](http://www.fil.ion.ucl.ac.uk/~karl/) [wiki](https://en.wikipedia.org/wiki/Karl_J._Friston)
+
+[Notes](../notes/Free-Energy-Principle.md)
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/NIu_dJGyIQI?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+An interview were Karl briefly explains the Free Energy Principle, EFP. I like this.
+
+
+
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Y1egnoCWgUg?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+A lecture about the EFP.
+
+
+--------------------
+### [Peter Jansen]()
+
+#### World Tree: What's in an Explanation? Toward Explanation-centered Inference for Science Exams
+
+<iframe width="600" height="400" src="https://www.youtube.com/embed/EneqL2sr6cQ?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<strong>World Tree:</strong> 
+* [arxiv](https://arxiv.org/abs/1802.03052)
+* [arxiv pdf](https://arxiv.org/pdf/1802.03052.pdf)
+
+
 -------------------
 ### [Ilya Sutskever](http://www.cs.toronto.edu/~ilya/)
 <iframe width="600" height="400" src="https://www.youtube.com/embed/AopSlxNYqX8?list=WL&amp;ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -35,18 +64,6 @@ Papers:
 
 -----------------------------
 
-### [Peter Jansen]()
-
-#### World Tree: What's in an Explanation? Toward Explanation-centered Inference for Science Exams
-
-<iframe width="600" height="400" src="https://www.youtube.com/embed/EneqL2sr6cQ?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
-<strong>World Tree:</strong> 
-* [arxiv](https://arxiv.org/abs/1802.03052)
-* [arxiv pdf](https://arxiv.org/pdf/1802.03052.pdf)
-
------------------------------
 
 ### [Geoffrey Hinton](http://www.cs.toronto.edu/~hinton/)
 
