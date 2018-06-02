@@ -1,46 +1,16 @@
 
-/* Note content window as grid */
-/* .notes-menu { */
-/*     /1* Small screens *1/ */
-/*     display: grid; */
-/*     grid-template-columns: 1fr; */
-/*     grid-template: */
-/*         "sidenav" */
-/*         "main"; */
-/*     grid-gap: 20px; */
-/*     background-color: #111; */
-/*     padding: 10px; */
-/* } */
-
-/* @media (min-width: 500px) { */
-/*     /1* Large screens *1/ */
-/*     .notes-menu { */
-/*         grid-template: */
-/*             "cards about"; */
-/*         grid-template-columns: minmax(200px, 400px) auto; */
-/*     } */
-/* } */
-
-
-.main {
-    background: white;
-    padding: 20px;
-    max-height: 1000px;
-    text-align: center;
-    overflow: auto;
-    float: left;
-    width: 75%;
+.content {
+    display: flex;
+    width: 100%;
 }
 
 
 .sidenav {
     background: black;
-    height: 1500px;
     float: left;
-    width: 10%;
-    /* -webkit-transition: width 1s;/1* For Safari 3.1 to 6.0 *1/ */
-    /* transition-timing-function: ease-in; */
-    /* transition: width 0.5s; */
+    overflow-x: hidden;
+    width: 20%;
+    height: 100%;
 }
 
 .sidenav ul {
@@ -61,12 +31,36 @@
     overflow: hidden;
 }
 
-
+.sidenav li:hover {
+    background-color: #333;
+    cursor: pointer;
+}
 
  /* MAIN */
+.main {
+    background: white;
+    text-align: center;
+    overflow: auto;
+    float: left;
+    padding: 100px;
+    width: 75%;
+    height: 100%;
+    text-align: left;
+}
+
 .main blockquote{
     font-style: italic;
     color: gray;
+}
+
+.main pre{
+    border-radius: 3px;
+    background: #A8EDC4;
+}
+
+.main code{
+    border-radius: 3px;
+    background: #A8EDC4;
 }
 
 .main h1{
@@ -76,6 +70,10 @@
 .main ul{
     list-style-type: none;
     padding: 0;
+    text-align: left;
+    margin: 0 10%;
+    padding-left: 30px;
+    border: lightgray 1px solid;
 }
 
 .main li{
@@ -84,8 +82,16 @@
     margin: 0;
 }
 
+.main li ul{
+    text-decoration: none;
+    border: none;
+    margin: 0;
+}
 
 .main li a{
+    text-align:left;
+    border-radius: 5px;
+    padding: 4px;
     background: black;
     color: white;
 }
@@ -95,10 +101,9 @@
 }
 
 .main a{
-    padding: 4px;
-    background: #111;
-    color: white;
     border-radius: 5px;
+    background: #dde;
+    color: black;
 }
 
 .main a:hover{

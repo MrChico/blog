@@ -1,12 +1,8 @@
 # Artificial Intelligence
 
-
-system is stable 
 # Table of content*
 
 * [Introduction](#introduction)
-
-
 
 # Introduction
 
@@ -14,7 +10,7 @@ Perhaps one good approach for me personally is to let my curiosity control my wo
 from time to time. Starting many different projects at once, trying to save and document
 all progress as much as possible. On a personal level this behavior is something I seem to
 want to suppress. I feel a lot that made my life more tedious than it could have been is
-because of this behavior. The behavior, I know realize,  is to not deliver, to finish a
+because of this behavior. The behavior, I now realize,  is to not deliver, to finish a
 project, to follow through. However, the point here is to not focus on those thoughts but
 to actually completely experience how following my curiosity turns out. I am on vacation
 and thusly I may experience with these matters without shame.

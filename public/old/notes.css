@@ -13,11 +13,6 @@ html {
     max-width: 1500px;
 }
 
-body {
-    font-family: Arial;
-    padding: 10px 20px;
-    background: white;
-}
 
 blockquote {
     font-style: italic;

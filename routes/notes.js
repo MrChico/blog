@@ -73,18 +73,32 @@ function getHtml(file) {
 
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
-	// res.render('notes', {title: 'Notes'}); 
-	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: ''});
+	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: 'HELO'});
 });
 
 // Jquery send get request: /dirs/../file.md
 // getHtml finds the file and converts it from markdown to html
 // and sends back
 // Jquery sets relevant html.
+// router.get('/*', (req, res) => {
+//     var id = req.path;
+//     var html = getHtml(id);
+// 	res.send(html);
+// });
+
+// no jquery
+// Choosing the menu-items opens a new page the same as the first one
+// but with the relevant html in the relevant container
 router.get('/*', (req, res) => {
     var id = req.path;
-    var html = getHtml(id);
-	res.send(html);
+    var noteHtml = getHtml(id); // Return html. md -> html
+
+    var noteName = id.split('/');
+    noteName = noteName[noteName.length-1];
+    noteName = noteName.slice(0, noteName.length-3);  // remove extension (.md)
+    noteName = 'Notes: ' + noteName
+
+	res.render('notes', {data: allFilesAndPaths, title: noteName, article: noteHtml});
 });
 
 module.exports = router;
