@@ -21,9 +21,7 @@ structure with a sidenav and a main/article column. The major advantage of using
 in the [index content container](/). Which I have not started working on.
 
 -----------------------
-
 ### Index container 
-
 1. Get summary of all notes.
 2. Create card
   * CSS
@@ -31,8 +29,10 @@ in the [index content container](/). Which I have not started working on.
 3. video-menu should do the same but only make video summary cards.
 
 -----------------------
+### Googe draw.io diagrams  
+1. See if the html is useful
 
+-----------------------
 ### Surface Onenote drawing to blog
-
 1. Find an easy way to get images drawn on my surface to the blog
 2. Perhaps a simpler POST - scheme where an image and a summary is pushed to the server.

@@ -39,7 +39,6 @@
  /* MAIN */
 .main {
     background: white;
-    text-align: center;
     overflow: auto;
     float: left;
     padding: 100px;
@@ -48,9 +47,20 @@
     text-align: left;
 }
 
+.main .article-image{
+    display: block;
+    width:80%;
+    margin:auto;
+}
+
 .main blockquote{
     font-style: italic;
     color: gray;
+}
+
+.main figcaption{
+    font-style: italic;
+    color: #555;
 }
 
 .main pre{
@@ -65,6 +75,11 @@
 
 .main h1{
     text-align:center
+}
+
+.main ol{
+    font-weight: bold;
+    font-size: 110%;
 }
 
 .main ul{

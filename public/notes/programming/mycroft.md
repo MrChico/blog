@@ -13,7 +13,6 @@
 - [Overview](#overview)
 - [Technical details](#technical-details)
 
-
 # Mycroft
 # Introduction
 
@@ -85,55 +84,67 @@ snippets and create code.
 
 Mycroft can be configured with a config files and may be located in either `/etc/mycroft/mycroft.conf` or `~/.mycroft/mycroft.conf `.
 
-----------------------------
-
 #### Uninstall
 
 Uninstalling is simply to remove the directories used along with the virtual environment
 created.
 
 ```bash
-sudo rm -R ~/virtualenv/mycroft
 rm -rf ~/mycroft-core
 rm -rf ~/.mycroft
 sudo rm -rf /opt/mycroft
 ```
+
+<br>
+<br>
+-------------------------------
+
 -------------------------------
 
 
 # Overview
+<figure>
+  <img src="/images/onenote/mycroft.png" alt="Mycroft note with onenote" width="100%" > 
+  <figcaption>Figure: Notes on mycroft. </figcaption>
+</figure> 
 
-Major components
-- [Server](##server)
-- [Speech](##speech)
-- [Audio](##audio)
-- [Skill](##skills)
+#### This section is just a reformulation of ["About Mycroft"](https://mycroft.ai/documentation/mycroft-software-hardware/#about-mycroft) in the documentation for my own learning.
 
-## Server
+Mycroft first always listens for the wake word using [PocketSphinx]() which is built on CMUSphinx [(tutorial for developers)](https://cmusphinx.github.io/wiki/tutorial/).  This is a lightweight speech recognition software to activate mycroft. Once the wake word has been processed an audio-recording is initialized and when finished sends the audioclip to the google [STT-API](https://cloud.google.com/speech-to-text/). The API turns the audio file into text. After this the text is processed for intent and by default is handled by [adapt](https://github.com/MycroftAI/adapt).
 
-## Speech
+The Major components started when initializing `./mycroft_start.sh all` are the server,
+speech, audio and skill programs. 
 
-## Audio
 
-## Skills
+### TODO: 
+#### How are skills implemented? What code initates a skill?
+#### Where is the list of keywords from all skills located? 
+#### Implement a simple skill.
+#### Make a super useful cool skill 
 
+### Skills
 The skills mycroft utilizes are installed through the CLI-command `msm install` where msm is the mycroft skill manager. All the skills are git-repos cloned into `/opt/mycroft/skills/` and when mycroft is started the loading procedure is shown in the cli-ui.
 
-I encountered trouble installing the [desktop-launcher](https://github.com/MycroftAI/skill-desktop-launcher) skill. It complained that I did not have the `gi` module installed.
-
-```bash
-sudo apt install libgirepository1.0-dev
-```
-
-[pygobject](http://pygobject.readthedocs.io/en/latest/getting_started.html#pypi-getting-started)
+<strong>mini-project:</strong>
+I want to be able to search in an arbitrary folder for pdf and open it with zathura (or
+customizeable pdf-reader). Open new documents in tab of existing session.
 
 
-# Technical details 
 
-### TTS, STT
-[Deepspeech](https://github.com/mozilla/DeepSpeech.git)
 
-based on baidou paper from 2014: (ee: seems interesting)
 
+
+
+
+<br>
+<br>
+-------------------------------
+
+-------------------------------
+## Technical details In progress speech recognition [Deepspeech](https://github.com/mozilla/DeepSpeech.git), a project by mozilla based on baidou paper from 2014: (ee: seems interesting)
   * [arxiv](https://arxiv.org/abs/1412.5567)
   * [pdf](https://arxiv.org/pdf/1412.5567.pdf)
+
+
+
+
