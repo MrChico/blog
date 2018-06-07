@@ -13,4 +13,5 @@ Reinforcement Learning notes.
 * Actor-critic
 * PPO
 * HER
+* Free Energy
 

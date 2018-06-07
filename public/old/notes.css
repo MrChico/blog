@@ -34,11 +34,17 @@ p {
     text-align: left;
 }
 
-img {
-    max-height: 300px;
-    max-width: 80%;
-    display: block;
+/* img { */
+/*     max-height: 300px; */
+/*     max-width: 80%; */
+/*     display: block; */
+/*     padding: 0 10%; */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/* } */
+
+.image {
+    padding: 0 10%;
     margin-left: auto;
     margin-right: auto;
 }
-

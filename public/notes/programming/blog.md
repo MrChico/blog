@@ -32,7 +32,8 @@ in the [index content container](/). Which I have not started working on.
 ### Googe draw.io diagrams  
 1. See if the html is useful
 
+
 -----------------------
-### Surface Onenote drawing to blog
-1. Find an easy way to get images drawn on my surface to the blog
-2. Perhaps a simpler POST - scheme where an image and a summary is pushed to the server.
+### Small header in note articles
+1. It is nice to see clearly the header for the "blogpost"
+2. Barely visible cklickable links to git and hamburger menu? Opacity? Animation?
