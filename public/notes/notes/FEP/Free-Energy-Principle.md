@@ -105,3 +105,5 @@ Prior: the probability distribution or density on the causes of data that encode
 </li>
 </ul>
 </div>
+
+https://youtu.be/Y1egnoCWgUg?t=1225

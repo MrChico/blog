@@ -37,3 +37,12 @@ in the [index content container](/). Which I have not started working on.
 ### Small header in note articles
 1. It is nice to see clearly the header for the "blogpost"
 2. Barely visible cklickable links to git and hamburger menu? Opacity? Animation?
+
+-----------------------
+### Tensorflow.js [TSNE](https://github.com/tensorflow/tfjs-tsne)
+
+
+-----------------------
+### Notes in html
+
+* Common snippets
