@@ -1,5 +1,6 @@
+<img class="article-image" src="/images/notes/ReinforcementLearning.png" alt="RL"> 
+
 # Reinforcement Learning
-![RL](/images/notes/ReinforcementLearning.png)
 
 ## Introduction
 An **agent** operating in an **environment**, taking **actions** and receiving **rewards**.
@@ -14,4 +15,3 @@ Reinforcement Learning notes.
 * PPO
 * HER
 * Free Energy
-

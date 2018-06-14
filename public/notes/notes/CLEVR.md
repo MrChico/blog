@@ -1,6 +1,7 @@
-# CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning ([website](https://cs.stanford.edu/people/jcjohns/clevr/), [arxiv]( https://arxiv.org/abs/1612.06890), [pdf]( https://arxiv.org/pdf/1612.06890.pdf))
 
-![CLEVR](/images/notes/CLEVR_paper.png)
+<img class="article-image" src="/images/notes/CLEVR_paper.png" alt="Clevr"> 
+
+# CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning ([website](https://cs.stanford.edu/people/jcjohns/clevr/), [arxiv]( https://arxiv.org/abs/1612.06890), [pdf]( https://arxiv.org/pdf/1612.06890.pdf))
 
 ## Introduction
 

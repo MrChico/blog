@@ -5,14 +5,30 @@
 
 <body>
   <div class="sidenav" id="menu">
+    <span class="toggle" style="font-size:30px;cursor:pointer;color:white;" onclick="closeNav()">&times;</span>
     <ul>
       <li><a class="test-item" id=''>TEST</a> </li>
       {{#each data}}
-        <li><a class="menu-item" href={{this}} >{{@key}}</a> </li>
-        <!-- <li><a class="menu-item" id={{this}} >{{@key}}</a> </li> -->
+      <li><a class="menu-item" href={{this}} >{{@key}}</a> </li>
       {{/each}}
     </ul>
   </div>
-  <div class="main" id="main">{{{article}}}</div>
 
+  <div class="main" id="main">
+    <!-- Show/hide menu -->
+    {{#if showMenu}}
+      <script>
+        openNav()
+        fullHeader()
+      </script>
+    {{else}}
+      <script>
+        closeNav()
+        smallHeader()
+      </script>
+    {{/if}}
+
+    <!-- main articel -->
+    {{{article}}}
+  </div>
 </body>

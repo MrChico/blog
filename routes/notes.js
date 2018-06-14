@@ -73,7 +73,7 @@ function getHtml(file) {
 
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
-	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: 'HELO'});
+	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: "HelloYo", showMenu: true});
 });
 
 // Jquery send get request: /dirs/../file.md
@@ -91,14 +91,14 @@ router.get('/', function(req, res, next) {
 // but with the relevant html in the relevant container
 router.get('/*', (req, res) => {
     var id = req.path;
-    var noteHtml = getHtml(id); // Return html. md -> html
+    var noteHtml = getHtml(id); // Returns html to be displayed in main container
 
     var noteName = id.split('/');
     noteName = noteName[noteName.length-1];
     noteName = noteName.slice(0, noteName.length-3);  // remove extension (.md)
     noteName = 'Notes: ' + noteName
 
-	res.render('notes', {data: allFilesAndPaths, title: noteName, article: noteHtml});
+	res.render('notes', {data: allFilesAndPaths, title: noteName, article: noteHtml, showMenu: false});
 });
 
 module.exports = router;

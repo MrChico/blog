@@ -9,11 +9,12 @@
   <body>
     <div class="grid-body">
 
-      <header class="header">
-        <div class="header-text">
+      <header id="fullHeader">
+        <div id="header-text">
           <h1 class="">Erik </h1>
           <h3 class="">PhD Candidate at KTH</h3>
         </div>
+        <span id="global-menu" style="color:white;font-size:30px;cursor:pointer;float:left;" onclick="openNav()">&#9776; </span>
 
         <div class="navbar">
           <!-- TODO: make dropdown for notes -->
@@ -26,6 +27,7 @@
       </header>
 
       <div class="content"> {{{ body }}} </div>
+
       <div class="footer"> <a href='https://www.github.com/ErikEkstedt'> <img src="/icons/github.svg" style="width: 100px"> </a> </div>
 
     </div>

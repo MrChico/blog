@@ -1,12 +1,23 @@
-
 .content {
     display: flex;
     width: 100%;
 }
 
-
+/* Sidenav */
+/* Sidenav */
+/* Sidenav */
+/* Sidenav */
+/* Sidenav */
 .sidenav {
     background: black;
+    float: left;
+    overflow-x: hidden;
+    width: 0%;
+    height: 100%;
+}
+
+.sidenav .visible {
+    background: white;
     float: left;
     overflow-x: hidden;
     width: 20%;
@@ -18,7 +29,6 @@
     margin: 0;
     padding: 8px;
 }
-
 .sidenav li {
     display: block;
     padding: 8px;
@@ -26,17 +36,25 @@
     border-radius: 3px;
     margin-bottom: 7px;
     background-color: #111;
-    color: #ffffff;
+    color: #aaa;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     overflow: hidden;
 }
-
 .sidenav li:hover {
     background-color: #333;
     cursor: pointer;
 }
 
- /* MAIN */
+.sidenav li a{
+    color: #ddd;
+    cursor: pointer;
+}
+
+/* MAIN */
+/* MAIN */
+/* MAIN */
+/* MAIN */
+/* MAIN */
 .main {
     background: white;
     overflow: auto;
@@ -46,42 +64,34 @@
     height: 100%;
     text-align: left;
 }
-
 .main .article-image{
     display: block;
-    width:50%;
+    width:90%;
     margin:auto;
 }
-
 .main blockquote{
     font-style: italic;
     color: gray;
 }
-
 .main figcaption{
     font-style: italic;
     color: #555;
 }
-
 .main pre{
     border-radius: 3px;
     background: #A8EDC4;
 }
-
 .main code{
     border-radius: 3px;
     background: #A8EDC4;
 }
-
 .main h1{
     text-align:center
 }
-
 .main ol{
     font-weight: bold;
     font-size: 110%;
 }
-
 .main ul{
     /* list-style-type: none; */
     padding: 0;
@@ -91,19 +101,42 @@
     width: 70%
     border: lightgray 1px solid;
 }
-
 .main li{
     text-decoration: none;
     padding: 8px;
     margin: 0;
 }
-
 .main li ul{
     text-decoration: none;
     border: none;
     margin: 0;
 }
+.main li a{
+    text-align:left;
+    border-radius: 5px;
+    padding: 4px;
+    background: black;
+    color: white;
+}
+.main li a:hover{
+    background: blue;
+}
+.main a{
+    border-radius: 5px;
+    background: #dde;
+    color: black;
+}
+.main a:hover{
+    padding: 4px;
+    background: blue;
+    color: white;
+}
 
+/* MISC */
+/* MISC */
+/* MISC */
+/* MISC */
+/* MISC */
 .card {
     border: 1px solid;
     width: 600px;
@@ -112,12 +145,10 @@
     padding: 20px;
     background: rgba(18,83,88,0.64);
 }
-
 .right-column{
     width:75;
     float:left;
 }
-
 .left-column{
     width:25;
     float:left;
@@ -129,28 +160,4 @@
     padding: 10px;
     width: 500px;
 
-}
-
-.main li a{
-    text-align:left;
-    border-radius: 5px;
-    padding: 4px;
-    background: black;
-    color: white;
-}
-
-.main li a:hover{
-    background: blue;
-}
-
-.main a{
-    border-radius: 5px;
-    background: #dde;
-    color: black;
-}
-
-.main a:hover{
-    padding: 4px;
-    background: blue;
-    color: white;
 }
