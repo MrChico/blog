@@ -13,4 +13,3 @@
 4. Was the results interesting?
 5. Is there an implementation in<img src="/icons/pytorch.jpeg" alt="PyTorch" width="60px" style="display:inline">?  
 
-
