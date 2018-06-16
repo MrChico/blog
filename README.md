@@ -7,25 +7,7 @@ The goal of the project is to write down/script what I am learning in order to, 
 
 ## Todo
 
-### Automate Notes tab
-
-
-* 
-
-
-
-#### Switch view engine
-
-Jade/Pug is not perfect. I think I prefer to just code in basic html and handlebars is much more similar than pug.
-
-
-#### Change to CSS grid
-
-* Use firefox for preview (shows grid)
-* [w3school](https://www.w3schools.com/css/css_grid.asp)
-
 #### dropdown menu for notes
-
 * Notes should become a dropdown menu
   where one can choose between the
   different chategories of notes.
@@ -33,7 +15,6 @@ Jade/Pug is not perfect. I think I prefer to just code in basic html and handleb
 * A "frontpage" for notes leading to the
   chategory pages if dropdown menu is not
   used.
-
 
 #### Fancy words
 
@@ -55,8 +36,5 @@ Show "fancy" words I save from reading papers
 
 
 ## Sources 
-
 ### [Academind - tutorial](https://www.youtube.com/watch?v=bf8L9tQi_MQ)
-
 This was a good tutorial on express which made me start using jade/pug again. Speed 2x though...
-
