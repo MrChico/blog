@@ -19,6 +19,8 @@ This is planned to work as a nexus for different programming resources I have ut
 * Git: 
   * Not really what I wanted. "pop" a repo sub directory from repo and create new repo [Tutorial](https://aigeec.com/how-to-split-a-git-repo/)
 
+* Tmux [tutorial](https://minimul.com/teaches/tmux)
+* template, send-keys, elinks?
 
 ## Vim
 
