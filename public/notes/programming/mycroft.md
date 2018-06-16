@@ -2,7 +2,6 @@
 
 # Table of Contents
 
-
 - [Documentation](https://mycroft.ai/documentation/)
 - [Introduction](#introduction)
 - [Install for linux](#install-for-linux)
@@ -125,14 +124,26 @@ speech, audio and skill programs.
 ### Skills
 The skills mycroft utilizes are installed through the CLI-command `msm install` where msm is the mycroft skill manager. All the skills are git-repos cloned into `/opt/mycroft/skills/` and when mycroft is started the loading procedure is shown in the cli-ui.
 
-<strong>mini-project:</strong>
+## Projects
+
+### Open file
 I want to be able to search in an arbitrary folder for pdf and open it with zathura (or
 customizeable pdf-reader). Open new documents in tab of existing session.
 
+1. query.filepath
+2. execute command (open, show folder terminal/dolphin,)
 
+### Recorder
 
+> user: Computer record.
 
-
+* Floating window with buttons to label the current time in the recording
+* Store data
+  * Audio recording
+  * Google ASR
+  * User label
+  * Keyboard events
+  * Mouse events
 
 
 
@@ -141,10 +152,9 @@ customizeable pdf-reader). Open new documents in tab of existing session.
 -------------------------------
 
 -------------------------------
-## Technical details In progress speech recognition [Deepspeech](https://github.com/mozilla/DeepSpeech.git), a project by mozilla based on baidou paper from 2014: (ee: seems interesting)
+## Technical details 
+
+In progress speech recognition [Deepspeech](https://github.com/mozilla/DeepSpeech.git), a project by mozilla based on baidou paper from 2014: (ee: seems interesting)
   * [arxiv](https://arxiv.org/abs/1412.5567)
   * [pdf](https://arxiv.org/pdf/1412.5567.pdf)
-
-
-
 

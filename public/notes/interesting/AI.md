@@ -3,6 +3,12 @@
 # Table of content*
 
 * [Introduction](#introduction)
+* [Machine Learning](##machine-learning)
+* [Projects](#starting-projects)
+  * [Data is everything](#starting-projects)
+  * [Self Replicators](#starting-projects)
+  * [Game of Life](#starting-projects)
+  * [Make static dataset interactive - phd](#starting-projects)
 
 # Introduction
 
@@ -27,11 +33,23 @@ Make simple/small little working code snippets from state of the art systems use
 
 #### Starting projects:
 
-Vision:_
+Vision:
 * detectron
-
-* Wavenet
 * duplex
+
+Generate speech
+* Wavenet
+* SimpleRNN
+* pgGan for audio
+
+Determine Timing:
+* MAPTask emulation
+* Make a static dataset interactive through RL
+  * Perhaps there could be supervised alternative for simplicity
+
+
+
+
 
 -------------------------------------------------
 
@@ -48,6 +66,8 @@ in cold air](clip youtube of this)
 ### Self replicators
 
 
+-------------------------------------------------
+### [Game of Life](../games-of-life/games-of-life.md)
 
-
-
+* Game of Life
+* Game of Assistant
