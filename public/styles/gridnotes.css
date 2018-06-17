@@ -114,12 +114,12 @@
 .main li a{
     text-align:left;
     border-radius: 5px;
-    padding: 4px;
-    background: black;
+    padding: 2px;
+    background: ;rgba(135,171,175,0.62)
     color: white;
 }
 .main li a:hover{
-    background: blue;
+    background: rgba(89,186,172,0.69);
 }
 .main a{
     border-radius: 5px;

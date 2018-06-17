@@ -1,6 +1,5 @@
 # Project
 
-bort med navigeringen och koda html som notes. Kanske blir lättast så.
 ## Most important research areas
 ### World
 
