@@ -14,7 +14,7 @@
 
 Perhaps one good approach for me personally is to let my curiosity control my workflow from time to time. Starting many different projects at once, trying to save and document all progress as much as possible. On a personal level this behavior is something I seem to want to suppress. I feel a lot that made my life more tedious than it could have been is because of this behavior. The behavior, I now realize,  is to not deliver, to finish a project, to follow through. However, the point here is to not focus on those thoughts but to actually completely experience how following my curiosity turns out. I am on vacation and thusly I may experience with these matters without shame.
 
-Artificial Intelligence is a broad, or perhaps the broadest, line of inquiry there is. This is true in the same manner that philosophy of consciousness and existentialism which shares this property. This is because of the recursive nature of the quest. How to understand what is trying to understand. AI is the pursuit of the ability to have the knowledge to replicate this phenomena. 
+Artificial Intelligence is a broad, or perhaps the broadest, line of inquiry there is. This is true in the same manner that it is true for philosophy of consciousness and existentialism. This is because of the recursive nature of the quest. How to understand what is trying to understand. AI is the pursuit of the ability to have the knowledge to replicate this phenomena in practice. 
 
 A basic starting point to pursue this quest is to think about the kinds of data beings that are intelligent has been constrained to. Data and information seems to be the correct level of complexity to formulate theories around living beings, intelligent beings and consciousness. We axiomatically start from realism and materialism, the notion that time has a direction and constrain the argumentation to inside of the observable universe with geology, biology, chemistry and physics being the best objective description of objective reality that we have yet to come up with. The level of complexity of human beings is in the "lagom" zone where both smaller and larger systems tend to be more simple than the systems that are us. In this level of complexity the best units to utilize in argument are data and information. What does DNA really code? How can DNA store the information to build consciousness and conscious agents? It is absurd! From one level I can not get my head around how to even code for a cell of anything. It is so fascinating that it is constrained to code for the builders and the way to construct these entities.  It is a self replicator and on this planet a very efficient one. Is consciousness an emergent property of any self replicator of a certain efficiency and on a certain level of complexity?
 
@@ -41,6 +41,7 @@ Generate speech
 * Wavenet
 * SimpleRNN
 * pgGan for audio
+* Tacotron
 
 Determine Timing:
 * MAPTask emulation

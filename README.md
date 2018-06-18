@@ -7,6 +7,10 @@ The goal of the project is to write down/script what I am learning in order to, 
 
 ## Todo
 
+* [ ] Sort note menu
+* [ ] Dropdown menu for notes
+* [ ] Fancy words 
+
 #### dropdown menu for notes
 * Notes should become a dropdown menu
   where one can choose between the
@@ -34,6 +38,7 @@ Show "fancy" words I save from reading papers
 * Make a nice visualization for the
   words/phrases and their meanings. 
 
+----------------
 
 ## Sources 
 ### [Academind - tutorial](https://www.youtube.com/watch?v=bf8L9tQi_MQ)

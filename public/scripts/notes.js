@@ -7,28 +7,16 @@ function smallHeader() {
     document.getElementById("header-text").style.height="30px";
 }
 
-// function openNav() {
-//     document.getElementById("menu").style.width="20%";
-//     document.getElementById("main").style.width="80%";
-// }
 
-// function closeNav() {
-//     document.getElementById("menu").style.width="0%";
-//     document.getElementById("main").style.width="100%";
-// }
-
-
-// hasClass
+// This is not me. Why have I not linked to answer?
 function hasClass(elem, className) {
 	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 }
-// addClass
 function addClass(elem, className) {
     if (!hasClass(elem, className)) {
     	elem.className += ' ' + className;
     }
 }
-// removeClass
 function removeClass(elem, className) {
 	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
 	if (hasClass(elem, className)) {
@@ -38,8 +26,6 @@ function removeClass(elem, className) {
         elem.className = newClass.replace(/^\s+|\s+$/g, '');
     }
 }
-
-// toggleClass
 function toggleClass(elem, elem2, className) {
 	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
     if (hasClass(elem, className)) {
@@ -51,7 +37,7 @@ function toggleClass(elem, elem2, className) {
         elem.style.width="0px";
         elem2.style.color="white";
     } else {
-        elem.style.width="200px";
+        elem.style.width="400px";
         elem2.style.color="#696363";
         elem.className += ' ' + className;
     }
@@ -111,9 +97,6 @@ $(document).ready(function(){
     });
 
 
-    // test snippet
-    // $(".test-item").on('click', function(){
-    // });
 
 });
 

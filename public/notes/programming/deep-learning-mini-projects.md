@@ -1,4 +1,4 @@
-# Deep Learning Mini Projects
+# Ideas / Deep Learning Mini Projects
 
 <img class="article-image" src="/images/notes/programming/pytorch-deep-learning.png"> 
 
@@ -13,3 +13,8 @@
 4. Was the results interesting?
 5. Is there an implementation in<img src="/icons/pytorch.jpeg" alt="PyTorch" width="60px" style="display:inline">?  
 
+
+
+## Fun with the Fancy word Idea 
+* fancy words with pronouncination. fancy accent. wavenet.
+* [Lo fi](https://www.youtube.com/watch?v=fw3UYy02lSI)
