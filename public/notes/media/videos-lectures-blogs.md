@@ -1,9 +1,8 @@
 # Interesting
-
-## Interesting talks
 Here are some casual notes taken during interesting youtube talks and so on...
 
 --------------------
+## Free Energy Principle
 ### [Karl Friston](http://www.fil.ion.ucl.ac.uk/~karl/) [wiki](https://en.wikipedia.org/wiki/Karl_J._Friston)
 
 [Notes](../notes/Free-Energy-Principle.md)
@@ -12,16 +11,27 @@ Here are some casual notes taken during interesting youtube talks and so on...
 
 An interview were Karl briefly explains the Free Energy Principle, EFP. I like this.
 
-
-
-
 <iframe width="640" height="360" src="https://www.youtube.com/embed/Y1egnoCWgUg?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 A lecture about the EFP.
 
+-------------------
+## A Neural Network Model that Can Reason
+### [Christopher D. Manning](https://nlp.stanford.edu/~manning/)
+
+ICLR 2018 talk by Christopher D. Manning, Stanford:
+<iframe width="640" height="480" src="https://www.youtube.com/embed/24AX4qJ7Tts?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<strong>Compositional Attention Networks for Machine Reasoning</strong>  ([arxiv](https://arxiv.org/abs/1803.03067), [pdf](https://arxiv.org/pdf/1803.03067.pdf))
+
+Papers
+* Synthetic and natural noise both break neural machine translation ([arxiv](https://arxiv.org/abs/1711.02173), [pdf](https://arxiv.org/pdf/1711.02173.pdf))
+* Beyond word importance: Contextual Decomposition ([arxiv](https://arxiv.org/abs/1801.05453), [pdf](https://arxiv.org/pdf/1801.05453.pdf))
+* Breaking the Softmax Bottleneck: A high-rank rnn language model ([arxiv](https://arxiv.org/abs/1711.03953), [pdf](https://arxiv.org/pdf/1711.03953.pdf))
+
 
 --------------------
-### [Peter Jansen]()
+### [Peter Jansen](http://cognitiveai.org/)
 
 #### World Tree: What's in an Explanation? Toward Explanation-centered Inference for Science Exams
 
