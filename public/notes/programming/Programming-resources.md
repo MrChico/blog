@@ -12,7 +12,9 @@ Regular python
 * [How to Code in Python 3 Tutorials](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-python-3)
   * [List operations](https://www.digitalocean.com/community/tutorials/how-to-use-list-methods-in-python-3) 
 * [Reading and writing files](http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python)
+* [Class method vs static method](http://www.bogotobogo.com/python/python_differences_between_static_method_and_class_method_instance_method.php)
 
+visual
 Packages I find useful.
 * [Pandas](https://pandas.pydata.org/) 
   * [cheatsheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
