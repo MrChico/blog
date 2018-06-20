@@ -2,17 +2,12 @@
 
 A post containing an interface to my computer setup. This is the starting point for a fresh computer initialization. This repo contains all the config files, linkers and developer tools.
 
-First clone [Dotfiles](https://github.com/ErikEkstedt/.files) 
-
-
-[README](https://github.com/ErikEkstedt/.files/blob/master/README.md)
-
-
-<strong>Installation:</strong>
-1. dotfiles
-2. SSH
-3. Synergy
-4. Mycroft 
+Full installation can be found in [README](https://github.com/ErikEkstedt/.files/blob/master/README.md) but is essentially using these tools:
+1. [Dotfiles](https://github.com/ErikEkstedt/.files) repository
+2. Setup/workflow heavily depends on Vim and tmux.
+3. SSH
+4. Synergy
+5. Mycroft 
 
 ------------------
 
@@ -50,3 +45,18 @@ Needed to install this library on Desktop Kubuntu 18.04 Kde 5.12.5
 ```bash
 sudo apt-get install libxrandr2:i386
 ```
+
+## Tmuxinator
+
+[Tmuxinator folder](https://github.com/ErikEkstedt/.files/tree/master/tmuxinator)
+
+1. Install tmuxinator
+2. Run shellscript to link templates
+
+
+```bash
+gem install tmuxinator
+sh ~/.files/tmuxinator/init.sh
+```
+
+

@@ -14,27 +14,27 @@ Regular python
 * [Reading and writing files](http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python)
 * [Class method vs static method](http://www.bogotobogo.com/python/python_differences_between_static_method_and_class_method_instance_method.php)
 
-visual
 Packages I find useful.
 * [Pandas](https://pandas.pydata.org/) 
   * [cheatsheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
 * [HDF5](https://www.h5py.org/)
+  * [tutorial](http://christopherlovell.co.uk/blog/2016/04/27/h5py-intro.html)
 * [Librosa](https://github.com/librosa/librosa)
   * [Introduction notebook](http://nbviewer.jupyter.org/github/librosa/librosa/blob/master/examples/LibROSA%20demo.ipynb)
-
 
 Perhaps useful but not explored.
 * [Seaborn](https://seaborn.pydata.org/)
 
+Other sources
+* [Top 20 python libraries for data science 2018](https://www.datasciencecentral.com/profiles/blogs/top-20-python-libraries-for-data-science-in-2018) 
+
+### PyTorch
+* Dataset and DataLoader [examples](https://github.com/utkuozbulak/pytorch-custom-dataset-examples)
 
 ## Unix/Linux
 * Set up **SSH**-server at home [Tutorial](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
-* <strong>Shell:</strong> File Existence Conditionals [examples](https://www.cyberciti.biz/tips/find-out-if-file-exists-with-conditional-expressions.html)
-* Git: 
+* <strong>Shell</strong> File Existence Conditionals [examples](https://www.cyberciti.biz/tips/find-out-if-file-exists-with-conditional-expressions.html)
+* Git:
   * Not really what I wanted. "pop" a repo sub directory from repo and create new repo [Tutorial](https://aigeec.com/how-to-split-a-git-repo/)
 * Tmux [tutorial](https://minimul.com/teaches/tmux)
 * template, send-keys, elinks?
-
-
-## Vim
-

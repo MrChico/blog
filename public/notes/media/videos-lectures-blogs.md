@@ -73,8 +73,6 @@ Papers:
 * [Im2Flow: Motion hallucination from static images for action recognition](https://arxiv.org/abs/1712.04109)
 
 -----------------------------
-
-
 ### [Geoffrey Hinton](http://www.cs.toronto.edu/~hinton/)
 
 ##### What is wrong with convolutional neural nets?
@@ -83,3 +81,15 @@ Papers:
 
 * [Dynamic Routing Between Capsules](https://arxiv.org/abs/1710.09829)
 * [Matrix capsules with em routing](https://openreview.net/pdf?id=HJWLfGWRb)
+
+
+-----------------------------
+## Throwback Physics
+
+### Is Quantum Mechanics or General Relativity More Fundamental?
+
+[Sean Carroll](https://www.preposterousuniverse.com/) and [Matthew Leifer](http://mattleifer.info/)
+
+<iframe width="600" height="400" src="https://www.youtube.com/embed/9OGfvwt3H74?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+A chill conversation about fundamental physics.
