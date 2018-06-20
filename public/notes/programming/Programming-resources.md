@@ -15,6 +15,7 @@ Regular python
 * [Class method vs static method](http://www.bogotobogo.com/python/python_differences_between_static_method_and_class_method_instance_method.php)
 
 Packages I find useful.
+* [Numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html)
 * [Pandas](https://pandas.pydata.org/) 
   * [cheatsheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
 * [HDF5](https://www.h5py.org/)
