@@ -133,10 +133,11 @@
 }
 
 /* MISC */
-/* MISC */
-/* MISC */
-/* MISC */
-/* MISC */
+.paper-pdf {
+	background: rgba(102,196,233,0.56);
+	margin: 50px;
+}
+
 .card {
     border: 1px solid;
     width: 600px;

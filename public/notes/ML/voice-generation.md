@@ -47,36 +47,32 @@ End to end to end way of learning to generate audio maximizes the baysian
 inference?
 
 
-#### Papers
+## Papers
 
-SampleRNN: An Unconditional End-to-End Neural Audio Generation Model
-[SampleRNN](https://arxiv.org/abs/1612.07837) and [wavenet](https://arxiv.org/pdf/1609.03499.pdf) maximizes the same function. 
-* [SampleRnn](https://arxiv.org/abs/1612.07837) ICLR2017 8 people (Bengio) 
-<img height="480" src="/images/notes/DeepLearning/SampleRNN.png" alt="Wave animation">
+Paper used for research about how to generate audio.
 
-* [Wavenet](https://arxiv.org/pdf/1609.03499.pdf)
+### [SampleRnn](https://arxiv.org/abs/1612.07837) ICLR2017 8 people (Bengio) 
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1612.07837.pdf" width="600" height="300" type='application/pdf'>
+
+### [Wavenet](https://arxiv.org/pdf/1609.03499.pdf)
 Wavenet: A GENERATIVE MODEL FOR RAW AUDIO
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1609.03499.pdf" width="600" height="300" type='application/pdf'>
 
-<img height="280" src="/images/notes/DeepLearning/Wavenet.png" alt="Wave animation">
+### [Tacotron: Towards End-to-End Speech Synthesis](https://arxiv.org/abs/1703.10135) 
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1703.10135.pdf" width="600" height="300" type='application/pdf'>
+Paper trail:
+* [BLOG: Tacotron: Towards End-to-End Speech Synthesis](https://ai.googleblog.com/2018/03/expressive-speech-synthesis-with.html)
+* [BLOG: Tacotron 2: Generating Human-like Speech from Text](https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html)
+* [BLOG: TFGAN: A Lightweight Library for Generative Adversarial Networks](https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html) 
 
-* [Tacotron](https://arxiv.org/abs/1703.10135)
-[BLOG: Tacotron: Towards End-to-End Speech Synthesis](https://ai.googleblog.com/2018/03/expressive-speech-synthesis-with.html)
-
-
-[BLOG: Tacotron 2: Generating Human-like Speech from Text](https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html)
-
-
-[BLOG: TFGAN: A Lightweight Library for Generative Adversarial Networks](https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html) 
-
-
-* [Deep Speech](https://arxiv.org/pdf/1412.5567.pdf) by Baidu. 
+### [Deep Speech: Scaling up end-to-end speech recognition](https://arxiv.org/pdf/1412.5567.pdf) 
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1412.5567.pdf" width="600" height="300" type='application/pdf'>
 
 #### Code
 
 Implementations:
 * Nvidia Tacotron2 PyTorch [implementation](https://github.com/NVIDIA/tacotron2)
 * Nvidia Wavenet [implementation](https://github.com/NVIDIA/nv-wavenet)
-
 
 ##### Tools Code
 Python packages
