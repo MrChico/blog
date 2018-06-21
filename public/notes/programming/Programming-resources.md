@@ -26,16 +26,26 @@ Packages I find useful.
 Perhaps useful but not explored.
 * [Seaborn](https://seaborn.pydata.org/)
 
+
 Other sources
 * [Top 20 python libraries for data science 2018](https://www.datasciencecentral.com/profiles/blogs/top-20-python-libraries-for-data-science-in-2018) 
+
 
 ### PyTorch
 * Dataset and DataLoader [examples](https://github.com/utkuozbulak/pytorch-custom-dataset-examples)
 
+
 ## Unix/Linux
+
 * Set up **SSH**-server at home [Tutorial](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
 * <strong>Shell</strong> File Existence Conditionals [examples](https://www.cyberciti.biz/tips/find-out-if-file-exists-with-conditional-expressions.html)
 * Git:
-  * Not really what I wanted. "pop" a repo sub directory from repo and create new repo [Tutorial](https://aigeec.com/how-to-split-a-git-repo/)
+  * [Git zero to hero](https://hackernoon.com/git-from-zero-to-hero-starting-with-foundations-e42e49b524c5)
+  * How to create new git repo from sub-directory of an exisiting repo [Tutorial](https://aigeec.com/how-to-split-a-git-repo/)
 * Tmux [tutorial](https://minimul.com/teaches/tmux)
 * template, send-keys, elinks?
+
+
+## Mathematics
+
+* Statistics [Statlect](https://www.statlect.com/)
