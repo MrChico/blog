@@ -12,7 +12,6 @@ const noteHeader = path.join(__dirname, '../public/html/noteHeader.html')
 const notePath = path.join(__dirname, '../public/notes/');
 const headHtml = fs.readFileSync(noteHeader, 'utf8');
 
-
 function mdToHtml(id) {
     function makeCompleteNote(file) {
         var noteHtml = converter.makeHtml(file);  
@@ -29,10 +28,8 @@ function mdToHtml(id) {
         return summaryHtml
     }
 
-    console.log('!!! mkToHtml')
     const dirPath = path.join(notePath, id);
     var notes = fs.readdirSync(dirPath);
-    console.log('!!! mkToHtml2')
     var summaryMenu = {};
     var allNoteHtml = {};
     var name;
@@ -51,19 +48,21 @@ function mdToHtml(id) {
     return [summaryMenu, allNoteHtml]
 }
 function getFilesAndPaths(dir) {
+	// find all markdown files in 
     var name, fp;
     var allFilesAndPaths = {};
-    var files = glob.sync("**/*.md", {cwd: notePath});
+    var files = glob.sync("**/*.md", {cwd: dir});
     files.forEach( function(f) {
         // fp = f.split(path.sep)
         name = f.split(path.sep).pop(); // [-1];
         allFilesAndPaths[name] = '/note/' + f;
     });
+	// TODO sort files
     return(allFilesAndPaths)
 }
 
 var allFilesAndPaths = getFilesAndPaths(notePath);
-console.log(util.inspect(allFilesAndPaths, false, null))
+// console.log(util.inspect(allFilesAndPaths, false, null))
 
 function getHtml(file) {
     file = path.join(notePath, file);
@@ -73,7 +72,7 @@ function getHtml(file) {
 
 // GRID + HANDLEBARS
 router.get('/', function(req, res, next) {
-	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: "HelloYo", showMenu: true});
+	res.render('notes', {data: allFilesAndPaths, title: "Notes", article: "Note Frontpage HTML", showMenu: true});
 });
 
 // Jquery send get request: /dirs/../file.md
@@ -87,13 +86,13 @@ router.get('/', function(req, res, next) {
 // });
 
 // no jquery
-// Choosing the menu-items opens a new page the same as the first one
+// Choosing the menu-items opens a new page with the samthe same as the first one
 // but with the relevant html in the relevant container
 router.get('/*', (req, res) => {
     var id = req.path;
     var noteHtml = getHtml(id); // Returns html to be displayed in main container
-
     var noteName = id.split('/');
+
     noteName = noteName[noteName.length-1];
     noteName = noteName.slice(0, noteName.length-3);  // remove extension (.md)
     noteName = 'Notes: ' + noteName

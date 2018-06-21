@@ -37,7 +37,7 @@ Vision:
 * detectron
 * duplex
 
-Generate speech
+[Voice generation](../ML/voice-generation.md)
 * Wavenet
 * SimpleRNN
 * pgGan for audio
@@ -47,10 +47,6 @@ Determine Timing:
 * MAPTask emulation
 * Make a static dataset interactive through RL
   * Perhaps there could be supervised alternative for simplicity
-
-
-
-
 
 -------------------------------------------------
 
