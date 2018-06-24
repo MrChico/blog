@@ -62,4 +62,6 @@ Shell:
 ## [Gist](https://gist.github.com/ErikEkstedt)
 
 * [termColors](https://gist.github.com/ErikEkstedt/9ce3553dfc92341f3a6d9927fcc3c7bb) (shell)
-
+<script src="https://gist.github.com/ErikEkstedt/9ce3553dfc92341f3a6d9927fcc3c7bb.js"></script>
+* [checkCommandExistence](https://gist.github.com/ErikEkstedt/01caadaaee719cba35123638882e3494#file-checkcommandexistence-sh) (shell)
+<script src="https://gist.github.com/ErikEkstedt/01caadaaee719cba35123638882e3494.js"></script>

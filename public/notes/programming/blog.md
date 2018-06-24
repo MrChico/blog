@@ -8,6 +8,7 @@
 * [x] Server side serving of notes. <strong>Not final</strong> .
 * [ ] POST page
 * [ ] Surface OneNote drawing to blog. POST?
+* [ ] Hide/Show gist
 
 ### Grid 
 <iframe width="540" height="320" src="https://www.youtube.com/embed/txZq7Laz7_4?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -46,3 +47,8 @@ in the [index content container](/). Which I have not started working on.
 ### Notes in html
 
 * Common snippets
+
+### Hide/Show Gists 
+
+Have a clickable "link" that shows embedded gist.
+Now: Embedded gifs without css tweak.
