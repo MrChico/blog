@@ -80,7 +80,6 @@ Python packages
   * [numpy](https://github.com/librosa/librosa)
 
 ## SampleRNN
-
 Notes from paper.
 
 > The particular difficulty of audio generation is that there is often a very large

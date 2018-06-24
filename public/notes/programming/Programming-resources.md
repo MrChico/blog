@@ -6,7 +6,6 @@ This is planned to work as a nexus for different programming resources I have ut
 * [Useful js array & object methods](https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230)
 * Express youtube-tutorial [Academind](https://www.youtube.com/watch?v=bf8L9tQi_MQ)
 
-
 ## Python
 Regular python
 * [How to Code in Python 3 Tutorials](https://www.digitalocean.com/community/tutorial_series/how-to-code-in-python-3)
@@ -34,18 +33,31 @@ Other sources
 ### PyTorch
 * Dataset and DataLoader [examples](https://github.com/utkuozbulak/pytorch-custom-dataset-examples)
 
-
 ## Unix/Linux
 
-* Set up **SSH**-server at home [Tutorial](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
-* <strong>Shell</strong> File Existence Conditionals [examples](https://www.cyberciti.biz/tips/find-out-if-file-exists-with-conditional-expressions.html)
-* Git:
+Git:
   * [Git zero to hero](https://hackernoon.com/git-from-zero-to-hero-starting-with-foundations-e42e49b524c5)
   * How to create new git repo from sub-directory of an exisiting repo [Tutorial](https://aigeec.com/how-to-split-a-git-repo/)
-* Tmux [tutorial](https://minimul.com/teaches/tmux)
-* template, send-keys, elinks?
 
+Tmux:
+  * Tmux [tutorial](https://minimul.com/teaches/tmux)
+  * Tmuxinator
+
+SSH:
+* Set up **SSH**-server at home [Tutorial](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
+
+Shell:
+* [Shellscript: Basic tutorial](https://www.shellscript.sh/index.html) 
+* [Ryans Tutorials: Bash Scripting Tutorial](https://ryanstutorials.net/bash-scripting-tutorial/) 
+* [File Existence Conditionals](https://www.cyberciti.biz/tips/find-out-if-file-exists-with-conditional-expressions.html)
+* `${Parameter}`
+* `$(Command)`
 
 ## Mathematics
 
 * Statistics [Statlect](https://www.statlect.com/)
+
+## [Gist](https://gist.github.com/ErikEkstedt)
+
+* [termColors](https://gist.github.com/ErikEkstedt/9ce3553dfc92341f3a6d9927fcc3c7bb) (shell)
+
