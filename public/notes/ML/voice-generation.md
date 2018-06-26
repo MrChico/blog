@@ -1,13 +1,38 @@
 # Generate a babling agent that captures human dialogue timing behavior
-Nyquist–Shannon sampling theorem
 
-A babbling agent is an entity that produces sounds akin to spoken human language. This
-could perhaps be achieved by creating a generative model condition on timing information.
+The preliminary goal of this research is to produce a babbling agent with human-like
+timing. A babbling is an entity that produces sounds akin to spoken human language. In
+human speech information is conveyed through the words spoken along with specific sounds
+produced but also in the timing implemented to organize the communication. This timing is
+a major factor in how natural we find any interaction. As a starting point this research
+focusing on the task of learning a generative speech model conditioned on timing
+information. The emphasis is not on the semantic meaning of words but on when utterances
+should be made.
 
+Previous work [Skantze, Roddy] trains models to predict a probability associated with
+whether the relevant speaker is speaking at an arbitrary interval in to the future (I need
+to rephrase this paragraph). In simple terms the goal is to, given a specific dataset
+containing spoken dialog with a ground truth of when a participant is speaking, train a
+model to predict this as accurately as possible. These models can then be used in a
+conversational system in order to maximize the natural timing of the system.
 
-## Reality to Deep Learning: Audio
+(Here comes the argumentation of why this work is an update to the previous research)
+Interactivity.
 
-Imagine sounds from 8bit:
+## Baysian Prior: Reality to Deep Learning: Audio
+
+In my research I will try to always think about the research in the context of reality and
+experience. I will therefore outline how information in the real world gets translated
+through various measuring devices (eyes, ears, cameras, microphones, text, touch). In this
+research the focus is on auditory information and thus we have to think about what audio
+is, what type of data it becomes when digitized and what transformation we want our neural
+networks to perform.
+
+Audio/sounds are pressure waves in a medium that is encoded by our ears (eardrum, cochlea,
+ossicles) and perceived as sound.  Imagine all the possible sounds there are, at the
+moment we could focus on the band of frequencies availble to human hearing (20Hz-20kHz). 
+
+Imagine the classic sound from 8bit music:
 <iframe width="320" height="270"
 src="https://www.youtube.com/embed/PnjB5OTn00g?list=PLE44EA8AF6F095EB3" frameborder="90"
 allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -45,26 +70,35 @@ values are shown as dots on the analogue signal.
 
 <img src="https://storage.googleapis.com/deepmind-live-cms/documents/BlogPost-Fig1-Anim-160908-r01.gif" alt="Wave animation">
 
-In python the [Librosa](https://github.com/librosa/librosa) package can read a wav-file from disk and convert it into a [numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html)
-array, out raw audio representation.
+
+In python the [Librosa](https://github.com/librosa/librosa) package can read a wav-file
+from disk and convert it into a [numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html) 
+array, our raw audio representation.
+
 
 ```python
 filepath = '/home/erik/Data/phd/project0/maptask/mono/q1ec2.1.wav'
 raw_audio_representation, sample_rate = librosa.load(filepath, sr=20000)
 ```
 
-When training deep generative models on raw audio these arrays are the ground truths, the
-input and the labels. Given a dataset of a certain distribution train a generative model
-to produce data as close as possible to this distribution. In this post we will look on
-three well known papers that all relate to the problem of speech generation.
+## Deep Learning When training unconditional deep generative models to generate raw audio
+the audio arrays are both the ground truths, the labels and the data. Given a dataset of a
+certain distribution train a generative model to produce data as close as possible to this
+distribution. A common approach for doing this (are there another way?) is to, given an
+audio input sequence of a certain duration/length, generate the future audio in a way as
+close to the actual continuation of the raw audio as possible. Given a sequence of samples
+{x_i, ..., x_(i+T)} where T is the amount of samples in each sequence, predict {x_{i+T+1},
+..., x_(i+T+N)}. Without any additional input these generative model will try to capture
+the data distribution of the particular dataset as well as possible. In short a model is
+given an input sequence, predict the future of that sequence, the prediction is compared
+to the ground truth and the difference between the two is minimized.
 
-1. Google Wavenet
-2. SampleRNN
-3. Tacotron
 
-
-## Papers
-Paper used for research about how to generate audio.
+//TODO
+In this post we will look on three well known papers that all relate to the problem of
+speech generation. First I start with the seminal paper from Deepmind called wavenet, then
+sampleRNN followed by Tacotron.
+//TODO
 
 ### [Wavenet: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
 <embed class="paper-pdf" src="https://arxiv.org/pdf/1609.03499.pdf" width="600" height="300" type='application/pdf'>
@@ -80,21 +114,10 @@ Paper trail:
 * [BLOG: Tacotron 2: Generating Human-like Speech from Text](https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html)
 * [BLOG: TFGAN: A Lightweight Library for Generative Adversarial Networks](https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html) 
 
-### [Deep Speech: Scaling up end-to-end speech recognition](https://arxiv.org/pdf/1412.5567.pdf) 
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1412.5567.pdf" width="600" height="300" type='application/pdf'>
+------------------
+## [Wavenet](https://arxiv.org/pdf/1609.03499.pdf)
 
-#### Code
-
-Implementations:
-* Nvidia Tacotron2 PyTorch [implementation](https://github.com/NVIDIA/tacotron2)
-* Nvidia Wavenet [implementation](https://github.com/NVIDIA/nv-wavenet)
-
-##### Tools Code
-Python packages
-  * [librosa](https://github.com/librosa/librosa)
-  * [numpy](https://github.com/librosa/librosa)
-
-## Wavenet
+[Faster Wavenet](https://arxiv.org/pdf/1711.10433.pdf)
 
 (Disclaimer: most things stated here are paraphrased from paper)
 
@@ -134,6 +157,7 @@ images below.
 > Image from the Wavenet [wavenet blogpost](https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
 
 
+------------------
 ## SampleRNN
 Notes from paper.
 
@@ -159,3 +183,15 @@ of the hierarchy, meaning all but the first module. the module "closes" to the d
 called the sample level module.
 
 
+## Tacotron
+
+HEEEEEY mr tacotron
+
+## Sources
+#### Code
+Implementations:
+* Nvidia Tacotron2 PyTorch [implementation](https://github.com/NVIDIA/tacotron2)
+* Nvidia Wavenet [implementation](https://github.com/NVIDIA/nv-wavenet)
+##### Tools Code
+Python packages
+  * [librosa](https://github.com/librosa/librosa)
