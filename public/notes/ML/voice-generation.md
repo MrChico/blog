@@ -36,9 +36,14 @@ Imagine the classic sound from 8bit music:
 <iframe width="320" height="270"
 src="https://www.youtube.com/embed/PnjB5OTn00g?list=PLE44EA8AF6F095EB3" frameborder="90"
 allow="autoplay; encrypted-media" allowfullscreen></iframe>
-to [opera sounds](https://www.youtube.com/watch?v=cf8uyUtK3fA) (Who is this Victor Borge Comedian/Opera/conductor person who turned 80 in 1989?), [animal sounds](http://soundbible.com/tags-animal.html), instruments and human speech. 
+to [opera sounds](https://www.youtube.com/watch?v=cf8uyUtK3fA) (Who is this Victor Borge Comedian/Opera/conductor person who turned 80 in 1989?), 
 
-All possible sounds span sound space. 
+[animal sounds](https://www.youtube.com/embed/eaXmIPHrHmY)
+<iframe width="320" height="270" src="https://www.youtube.com/embed/eaXmIPHrHmY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+instruments and human speech. 
+
+<strong>All possible sounds span sound space.</strong> 
 <iframe width="320" height="270"
 src="https://s3.envato.com/h264-video-previews/87821136-dccf-4270-a5a3-57f6cca7fde8/20404750.mp4" frameborder="90"
 allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -46,6 +51,8 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 Raw audio is represented by a waveform. This waveform is an intensity over time-sequence.  A [Fourier Transform](https://en.wikipedia.org/wiki/Fourier_transform) decomposes the signal in to a frequency domain representation, precisely a sum over all frequencies and their magnitude.  A linear set of frequencies played with different magnitudes.
 
 <iframe width="480" height="320" src="https://www.youtube.com/embed/spUNpyF58BY?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### Reality Computer/Digital/Data Intersection
 
 Raw audio is stored in the computer as an array of values. Audio is analogue in reality
 but in order to make it storable (on a computer) it is discretized into digital form
@@ -100,22 +107,10 @@ speech generation. First I start with the seminal paper from Deepmind called wav
 sampleRNN followed by Tacotron.
 //TODO
 
-### [Wavenet: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1609.03499.pdf" width="600" height="300" type='application/pdf'>
-
-### [SampleRnn: AN UNCONDITIONAL END-TO-END NEURAL AUDIO GENERATION MODEL](https://arxiv.org/abs/1612.07837) 
-ICLR2017 8 people (Bengio) 
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1612.07837.pdf" width="600" height="300" type='application/pdf'>
-
-### [Tacotron: Towards End-to-End Speech Synthesis](https://arxiv.org/abs/1703.10135) 
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1703.10135.pdf" width="600" height="300" type='application/pdf'>
-Paper trail:
-* [BLOG: Tacotron: Towards End-to-End Speech Synthesis](https://ai.googleblog.com/2018/03/expressive-speech-synthesis-with.html)
-* [BLOG: Tacotron 2: Generating Human-like Speech from Text](https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html)
-* [BLOG: TFGAN: A Lightweight Library for Generative Adversarial Networks](https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html) 
-
 ------------------
-## [Wavenet](https://arxiv.org/pdf/1609.03499.pdf)
+
+## [Wavenet: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1609.03499.pdf" width="600" height="300" type='application/pdf'>
 
 [Faster Wavenet](https://arxiv.org/pdf/1711.10433.pdf)
 
@@ -158,7 +153,11 @@ images below.
 
 
 ------------------
-## SampleRNN
+
+
+## [SampleRnn: AN UNCONDITIONAL END-TO-END NEURAL AUDIO GENERATION MODEL](https://arxiv.org/abs/1612.07837) 
+ICLR2017 8 people (Bengio) 
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1612.07837.pdf" width="600" height="300" type='application/pdf'>
 Notes from paper.
 
 > The particular difficulty of audio generation is that there is often a very large
@@ -182,10 +181,15 @@ module mentioned is the Frame-Level modules which are all the modules in the hig
 of the hierarchy, meaning all but the first module. the module "closes" to the data is
 called the sample level module.
 
+------------------
+## [Tacotron: Towards End-to-End Speech Synthesis](https://arxiv.org/abs/1703.10135) 
+<embed class="paper-pdf" src="https://arxiv.org/pdf/1703.10135.pdf" width="600" height="300" type='application/pdf'>
+Paper trail:
+* [BLOG: Tacotron: Towards End-to-End Speech Synthesis](https://ai.googleblog.com/2018/03/expressive-speech-synthesis-with.html)
+* [BLOG: Tacotron 2: Generating Human-like Speech from Text](https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html)
+* [BLOG: TFGAN: A Lightweight Library for Generative Adversarial Networks](https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html) 
 
-## Tacotron
-
-HEEEEEY mr tacotron
+------------------
 
 ## Sources
 #### Code
