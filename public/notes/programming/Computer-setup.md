@@ -11,6 +11,36 @@ Full installation can be found in [README](https://github.com/ErikEkstedt/.files
 
 ------------------
 
+## Install Linux on MacbookPro 2017
+
+<strong>:bulb: WARNING: Wifi is not working correctly (no 5GHz) :bulb:</strong> 
+
+The bad Wifi makes it kind of unusable. Have to wait to install KDE until it is resolved.
+
+Prerequisites: usb for boot, usb keyboard and mouse
+
+[Linux on MBP](https://gist.github.com/roadrunner2/1289542a748d9a104e7baec6a92f9cd7#file-0-linux-on-mbp-late-2016-md): The most complete source.
+
+[Linux on mid-2017 MacbookPro](https://nixaid.com/linux-on-macbookpro/): Tutorial that
+fixes touchpad/keyboard before install [Advanced].
+
+1. [Partition hard-drive](https://www.lifewire.com/dual-boot-linux-and-mac-os-4125733) 
+  * disk utility set `MD-DOS(FAT)`
+2. Keyboard and touchpad does not work out of box
+  * [mbp](https://github.com/Dunedan/mbp-2016-linux#keyboard--touchpad)
+
+
+### Why Kde over MacOs?
+
+Linux is open-source and great. I want to run linux on all devices as much as I can.
+
+Detail: A detail was that my workflow was interrupted by the inability to make
+cmd-hotkeys/shortcuts as I wish. The major thing was to use cmd-hjkl in terminal for
+moving around. This can of course be fixed and because of the bad WiFi property I have to
+fix this instead of dual booting. I am sad that I can't run Linux on my MBP :(
+
+------------------
+
 ## SSH
 
 All computers needs to run both client and server ssh such that all computers can get files from all other computers.

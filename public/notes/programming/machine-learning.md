@@ -1,4 +1,4 @@
-# Machine learning
+# Machine learning & Deep Learning
 
 * Visualization
 * REPL
@@ -23,10 +23,18 @@ components/tools to utilize during research in order to "clearly" articulate ide
 
 -------------------
 
+## [Unity](https://github.com/Unity-Technologies/ml-agents)
+
+Unity environment and agents.
+
+
+-------------------
 ## AI Safety Gridworld [Deepmind]
 
 A small and simple set of environments to evaluate AI safety. The code is available at 
 [Github](https://github.com/deepmind/ai-safety-gridworlds) and the [paper](https://arxiv.org/pdf/1711.09883.pdf) on arxiv.
+
+-------------------
 
 ### Installation  
 
