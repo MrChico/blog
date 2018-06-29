@@ -1,23 +1,28 @@
 # Concepts
 
-## Audio
-
-
 ### Mel-frequency
 
-<img class="article-image" style="width:600; margin: 0" src="/images/concepts/mel-scale.png"> 
-
-Paraphrasing wikipedia:
-
-The mel scale is a perceptual scale of pitches judged by listeners to be equal in distance
-from one another. The name <strong>mel</strong> comes from the word <strong>melody</strong> to indicate that the scale is based on <strong>pitch
-comparisons.</strong> [wikipedia](https://en.wikipedia.org/wiki/Mel_scale)
-
+<iframe src="https://en.m.wikipedia.org/wiki/Mel-frequency_cepstrum" title="Random Wikipedia Article" width="80%" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
 
 ### Mel-frequency Cepstrum Coefficients
+<iframe src="https://en.m.wikipedia.org/wiki/Mel-frequency_cepstrum" title="Mel-frequency Wikipedia Article" width="80%" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
 
-In sound processing, the mel-frequency cepstrum (MFC) is a representation of the
-short-term power spectrum of a sound, based on a linear cosine transform of a log power
-spectrum on a nonlinear mel scale of frequency.
+### [Language Model](https://en.wikipedia.org/wiki/Language_model)
+<iframe src="https://en.m.wikipedia.org/wiki/Language_model" title="Language Model Wikipedia Article" width="80%" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
 
-[wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum)
+
+### [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)
+<iframe src="https://en.m.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence" title="Language Model Wikipedia Article" width="80%" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+### [Minimum description length](https://en.wikipedia.org/wiki/Minimum_description_length)
+<iframe src="https://en.m.wikipedia.org/wiki/Minimum_description_length" title="Language Model Wikipedia Article" width="80%" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>

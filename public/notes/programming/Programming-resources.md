@@ -5,11 +5,6 @@ When I learn something, search for something and find a valuable solution I ough
 a trail here.
 
 ------------------
-## Javascript
-* [Useful js array & object methods](https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230)
-* Express youtube-tutorial [Academind](https://www.youtube.com/watch?v=bf8L9tQi_MQ)
-
-------------------
 ## Python
 
 ### Regular python
@@ -34,8 +29,6 @@ Other sources
 * [Top 20 python libraries for data science 2018](https://www.datasciencecentral.com/profiles/blogs/top-20-python-libraries-for-data-science-in-2018) 
 
 
-### PyTorch
-* Dataset and DataLoader [examples](https://github.com/utkuozbulak/pytorch-custom-dataset-examples)
 
 ------------------
 ## Unix/Linux
@@ -59,6 +52,20 @@ Other sources
 ### Tmux:
   * Tmux [tutorial](https://minimul.com/teaches/tmux)
   * Tmuxinator
+
+------------------
+## Deep Learning
+### [Tensorflow](https://www.tensorflow.org/)
+* [Beginner Tutorial](https://jacobbuckman.com/post/tensorflow-the-confusing-parts-1/)
+
+### [PyTorch](https://pytorch.org/)
+* Dataset and DataLoader [examples](https://github.com/utkuozbulak/pytorch-custom-dataset-examples)
+
+------------------
+## Javascript
+* [Useful js array & object methods](https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230)
+* Express youtube-tutorial [Academind](https://www.youtube.com/watch?v=bf8L9tQi_MQ)
+
 
 ------------------
 

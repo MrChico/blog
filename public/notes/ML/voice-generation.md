@@ -70,7 +70,7 @@ sampled audio representation can recreate audio at an arbitrary level of quality
 Not only are the analogue sound signals discretized in time but often also in the
 intensity. This range is typically range between 8 and 24 bits, for example a 16bit audio
 signal can take any of 2^16 = 65,536 possible values.  The sampled values are then stored
-in an array along with the sampling frequency and can be used to recreate the signal back
+(in) an array along with the sampling frequency and can be used to recreate the signal back
 to its analogue representation, sound. In the below visualization from Deepminds [wavenet
 blogpost](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), the sampled
 values are shown as dots on the analogue signal.
@@ -81,10 +81,7 @@ values are shown as dots on the analogue signal.
 In python the [Librosa](https://github.com/librosa/librosa) package can read a wav-file
 from disk and convert it into a [numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html) 
 array, our raw audio representation.
-
-
-```python
-filepath = '/home/erik/Data/phd/project0/maptask/mono/q1ec2.1.wav'
+```python filepath = '/home/erik/Data/phd/project-1/maptask/mono/q1ec2.1.wav'
 raw_audio_representation, sample_rate = librosa.load(filepath, sr=20000)
 ```
 
@@ -94,8 +91,8 @@ certain distribution train a generative model to produce data as close as possib
 distribution. A common approach for doing this (are there another way?) is to, given an
 audio input sequence of a certain duration/length, generate the future audio in a way as
 close to the actual continuation of the raw audio as possible. Given a sequence of samples
-{x_i, ..., x_(i+T)} where T is the amount of samples in each sequence, predict {x_{i+T+1},
-..., x_(i+T+N)}. Without any additional input these generative model will try to capture
+`{x\_i, ..., x\_(i+T)}` where T is the amount of samples in each sequence, predict `{x\_{i+T+1}`,
+..., x\_(i+T+N)}. Without any additional input these generative model will try to capture
 the data distribution of the particular dataset as well as possible. In short a model is
 given an input sequence, predict the future of that sequence, the prediction is compared
 to the ground truth and the difference between the two is minimized.
@@ -110,7 +107,8 @@ sampleRNN followed by Tacotron.
 ------------------
 
 ## [Wavenet: A GENERATIVE MODEL FOR RAW AUDIO](https://arxiv.org/pdf/1609.03499.pdf)
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1609.03499.pdf" width="600" height="300" type='application/pdf'>
+
+<embed class="paper-pdf" style="margin: 0; padding: 0" src="https://arxiv.org/pdf/1609.03499.pdf" width="600" height="300" type='application/pdf'>
 
 [Faster Wavenet](https://arxiv.org/pdf/1711.10433.pdf)
 
@@ -157,7 +155,7 @@ images below.
 
 ## [SampleRnn: AN UNCONDITIONAL END-TO-END NEURAL AUDIO GENERATION MODEL](https://arxiv.org/abs/1612.07837) 
 ICLR2017 8 people (Bengio) 
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1612.07837.pdf" width="600" height="300" type='application/pdf'>
+<embed class="paper-pdf" style="margin: 0; padding: 0" src="https://arxiv.org/pdf/1612.07837.pdf" width="600" height="300" type='application/pdf'>
 Notes from paper.
 
 > The particular difficulty of audio generation is that there is often a very large
@@ -183,19 +181,33 @@ called the sample level module.
 
 ------------------
 ## [Tacotron: Towards End-to-End Speech Synthesis](https://arxiv.org/abs/1703.10135) 
-<embed class="paper-pdf" src="https://arxiv.org/pdf/1703.10135.pdf" width="600" height="300" type='application/pdf'>
+
+<embed class="paper-pdf" style="margin: 0; padding: 0" src="https://arxiv.org/pdf/1703.10135.pdf" width="600" height="300" type='application/pdf'>
 Paper trail:
 * [BLOG: Tacotron: Towards End-to-End Speech Synthesis](https://ai.googleblog.com/2018/03/expressive-speech-synthesis-with.html)
 * [BLOG: Tacotron 2: Generating Human-like Speech from Text](https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html)
 * [BLOG: TFGAN: A Lightweight Library for Generative Adversarial Networks](https://ai.googleblog.com/2017/12/tfgan-lightweight-library-for.html) 
 
 ------------------
+## [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) 
+<embed class="paper-pdf" style="margin: 0; padding: 0" src="https://arxiv.org/pdf/1711.00937.pdf" width="600" height="300" type='application/pdf'>
 
-## Sources
-#### Code
+* [pdf](https://arxiv.org/pdf/1711.00937.pdf)
+* [Blog: Neural Discrete Representation Learning](https://avdnoord.github.io/homepage/vqvae/)
+
+Prior Knowledge
+1. [Tutorial on Variation Autoencoders (arxiv)](https://arxiv.org/pdf/1606.05908.pdf)
+2. [What is a variational autoencoder ](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/)
+3. [KL-Divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)
+
+<img width='80%' src="/images/notes/DeepLearning/VAE.png" alt="VAE">
+Figure taken from [1. Tutorial on Variation Autoencoders (arxiv)](https://arxiv.org/pdf/1606.05908.pdf)
+
+
+
+## Code
+[librosa](https://github.com/librosa/librosa)
+
 Implementations:
 * Nvidia Tacotron2 PyTorch [implementation](https://github.com/NVIDIA/tacotron2)
 * Nvidia Wavenet [implementation](https://github.com/NVIDIA/nv-wavenet)
-##### Tools Code
-Python packages
-  * [librosa](https://github.com/librosa/librosa)
