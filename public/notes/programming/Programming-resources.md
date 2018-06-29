@@ -24,6 +24,7 @@ a trail here.
 
 Perhaps useful but not explored.
 * [Seaborn](https://seaborn.pydata.org/)
+* [Plotly](https://plot.ly/)
 
 Other sources
 * [Top 20 python libraries for data science 2018](https://www.datasciencecentral.com/profiles/blogs/top-20-python-libraries-for-data-science-in-2018) 
