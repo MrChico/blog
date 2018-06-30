@@ -24,6 +24,9 @@ Prerequisites: usb for boot, usb keyboard and mouse
 [Linux on mid-2017 MacbookPro](https://nixaid.com/linux-on-macbookpro/): Tutorial that
 fixes touchpad/keyboard before install [Advanced].
 
+`sudo iwconfig wlp3s0 txpower 10dBm`
+
+
 1. [Partition hard-drive](https://www.lifewire.com/dual-boot-linux-and-mac-os-4125733) 
   * disk utility set `MD-DOS(FAT)`
 2. Keyboard and touchpad does not work out of box
