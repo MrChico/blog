@@ -26,31 +26,36 @@ So an intelligent system can infer future events based on prior events and opera
 Experiences, however complex, are always built from smaller building blocks which I mean are the sensory data. Intelligence is the way to relate sensory data and their effect on the outside world. [Free Energy Principle]()
 
 
-## Machine learning & Deep Learning
+## Machine learning & Deep Learning: Technical
 
 Make simple/small little working code snippets from state of the art systems used in speech generation, visual understanding, language understanding, communication.
 
-## [Herarchical Temporal Memory](https://numenta.org/hierarchical-temporal-memory/)
+### [Herarchical Temporal Memory](https://numenta.org/hierarchical-temporal-memory/)
 
 [Blogpost @ analyticsvidhya](https://www.analyticsvidhya.com/blog/2018/05/alternative-deep-learning-hierarchical-temporal-memory-htm-unsupervised-learning/)
 
 
-#### Starting projects:
+## Projects:
 
 Vision:
 * detectron
-* duplex
 
-[Voice generation](../ML/voice-generation.md)
+### [Self explanatory agent](/projects/self-explanatory-agent.md)
+### [Voice generation](/projects/voice-generation.md)
+Paper research
 * Wavenet
 * SimpleRNN
 * pgGan for audio
 * Tacotron
+* duplex
 
-Determine Timing:
+Goal:
+Determine Timing (action for passing the "driving" of the conversation):
 * MAPTask emulation
 * Make a static dataset interactive through RL
   * Perhaps there could be supervised alternative for simplicity
+
+
 
 -------------------------------------------------
 

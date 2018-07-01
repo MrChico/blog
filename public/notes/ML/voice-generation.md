@@ -1,5 +1,6 @@
 # Generate a babling agent that captures human dialogue timing behavior
 
+
 The preliminary goal of this research is to produce a babbling agent with human-like
 timing. A babbling is an entity that produces sounds akin to spoken human language. In
 human speech information is conveyed through the words spoken along with specific sounds
@@ -18,6 +19,24 @@ conversational system in order to maximize the natural timing of the system.
 
 (Here comes the argumentation of why this work is an update to the previous research)
 Interactivity.
+
+## Future Goal
+A conversation is instantiated by the actual passing of information in the real world. The
+speech and movements/correlated gestures instantiates conversation and the speaker is
+analogously driving the metaphorical conversational car. Both parts has accessed to their
+own local model of not only the metaphorical car but also of the landscape of the world in
+which this car is driving. The actual path the car will take is the intersection of the
+real worlds model of instantiation (ground truth, reality) and the participants internal
+models. The participants instantiates the conversational car/path/landscape from their
+interacting with each other through the "real" world.
+
+The current speaker is the driver of the car and the switching of speaker is when another
+agents continues the speech. When a shift like this occurs depends on the previously sent
+information, the participants backgrounds and associations, the participants intent of the
+conversation and their personalities. That is the properties of the involved generative
+models. However, to understand when the drivers switch one possibility is that there are
+enough information in the local audio signal that timing can be correctly classified to a
+sufficiently (for what purpose) high degree.
 
 ## Baysian Prior: Reality to Deep Learning: Audio
 
