@@ -230,14 +230,12 @@ intro
 
 
 ## Spectrogram
-### [Window in FFT](http://download.ni.com/evaluation/pxi/Understanding%20FFTs%20and%20Windowing.pdf)
 
-<img width="400" src="/images/notes/DeepLearning/FFT-window-explenation1.png" alt="Window 1">
-<img width="400" src="/images/notes/DeepLearning/FFT-window-explenation2.png" alt="Window 2">
-<img width="400" src="/images/notes/DeepLearning/FFT-window-explenation3.png" alt="Window 3">
-
-applying Fast Fourier Transform on a signal introduces "smearing" 
-
+## What is Windowing
+### [Source: Window in FFT](http://download.ni.com/evaluation/pxi/Understanding%20FFTs%20and%20Windowing.pdf)
+<img width="500" src="/images/notes/DeepLearning/FFT-window-explenation1.png" alt="Window 1">
+<img width="500" src="/images/notes/DeepLearning/FFT-window-explenation2.png" alt="Window 2">
+<img width="500" src="/images/notes/DeepLearning/FFT-window-explenation3.png" alt="Window 3">
 
 everything under here is as of now copied from wiki
 
