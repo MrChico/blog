@@ -223,6 +223,34 @@ Prior Knowledge
 Figure taken from [1. Tutorial on Variation Autoencoders (arxiv)](https://arxiv.org/pdf/1606.05908.pdf)
 
 
+# Feature Extraction
+
+There are many possible transformation of the raw audio sequences possible. blablabl more
+intro
+
+
+## Spectrogram
+### [Window in FFT](http://download.ni.com/evaluation/pxi/Understanding%20FFTs%20and%20Windowing.pdf)
+
+<img width="400" src="/images/notes/DeepLearning/FFT-window-explenation1.png" alt="Window 1">
+<img width="400" src="/images/notes/DeepLearning/FFT-window-explenation2.png" alt="Window 2">
+<img width="400" src="/images/notes/DeepLearning/FFT-window-explenation3.png" alt="Window 3">
+
+applying Fast Fourier Transform on a signal introduces "smearing" 
+
+
+everything under here is as of now copied from wiki
+
+### Mel-frequence cepstrum
+In sound processing, the mel-frequency cepstrum (MFC) is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency.
+
+### MFCC
+
+Mel-frequency cepstral coefficients (MFCCs) are coefficients 
+They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum").
+
+
+
 
 ## Code
 [librosa](https://github.com/librosa/librosa)

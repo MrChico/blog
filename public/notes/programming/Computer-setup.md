@@ -15,18 +15,22 @@ Full installation can be found in [README](https://github.com/ErikEkstedt/.files
 
 <strong>:bulb: WARNING: Wifi is not working correctly (no 5GHz) :bulb:</strong> 
 
-The bad Wifi makes it kind of unusable. Have to wait to install KDE until it is resolved.
-
-Prerequisites: usb for boot, usb keyboard and mouse
-
-[Linux on MBP](https://gist.github.com/roadrunner2/1289542a748d9a104e7baec6a92f9cd7#file-0-linux-on-mbp-late-2016-md): The most complete source.
+The most complete sources:
+* [State of Linux on the MacBook Pro 2016 & 2017](https://github.com/Dunedan/mbp-2016-linux)
+* [Linux on MBP](https://gist.github.com/roadrunner2/1289542a748d9a104e7baec6a92f9cd7#file-0-linux-on-mbp-late-2016-md)
 
 [Linux on mid-2017 MacbookPro](https://nixaid.com/linux-on-macbookpro/): Tutorial that
 fixes touchpad/keyboard before install [Advanced].
 
+Fix for wifi:
 `sudo iwconfig wlp3s0 txpower 10dBm`
+Once set wifi 2.4GHz works, home router, mobile phone and eduroam.
+(I have not found a way to implement this at startup in kde. Tried writing in `rc.local`
+but did not work and I did not try much more.)
 
 
+
+Prerequisites: usb for boot, usb keyboard and mouse
 1. [Partition hard-drive](https://www.lifewire.com/dual-boot-linux-and-mac-os-4125733) 
   * disk utility set `MD-DOS(FAT)`
 2. Keyboard and touchpad does not work out of box
