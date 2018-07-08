@@ -29,6 +29,11 @@ Perhaps useful but not explored.
 Other sources
 * [Top 20 python libraries for data science 2018](https://www.datasciencecentral.com/profiles/blogs/top-20-python-libraries-for-data-science-in-2018) 
 
+### Web
+[Python web scraping tutorial](https://www.dataquest.io/blog/web-scraping-tutorial-python/)
+
+* [BeautifulSoup: bs4]()
+
 
 
 ------------------
