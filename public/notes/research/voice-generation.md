@@ -1,6 +1,5 @@
 # Generate a babling agent that captures human dialogue timing behavior
 
-
 The preliminary goal of this research is to produce a babbling agent with human-like
 timing. A babbling is an entity that produces sounds akin to spoken human language. In
 human speech information is conveyed through the words spoken along with specific sounds
@@ -20,6 +19,7 @@ conversational system in order to maximize the natural timing of the system.
 (Here comes the argumentation of why this work is an update to the previous research)
 Interactivity.
 
+s
 ## Future Goal
 A conversation is instantiated by the actual passing of information in the real world. The
 speech and movements/correlated gestures instantiates conversation and the speaker is
