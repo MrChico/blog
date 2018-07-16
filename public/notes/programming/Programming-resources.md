@@ -13,6 +13,16 @@ a trail here.
 * [Reading and writing files](http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python)
 * [Class method vs static method](http://www.bogotobogo.com/python/python_differences_between_static_method_and_class_method_instance_method.php)
 
+```python
+import numpy as np
+
+a = np.arange(100)
+a[slice(0,50,2)]
+>>> 0, 2, 4, 6, ... , 50
+
+```
+
+
 ### Packages I find useful.
 * [Numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html)
 * [Pandas](https://pandas.pydata.org/) 
@@ -31,9 +41,7 @@ Other sources
 
 ### Web
 [Python web scraping tutorial](https://www.dataquest.io/blog/web-scraping-tutorial-python/)
-
 * [BeautifulSoup: bs4]()
-
 
 
 ------------------
@@ -72,7 +80,6 @@ Other sources
 ## Javascript
 * [Useful js array & object methods](https://codeburst.io/useful-javascript-array-and-object-methods-6c7971d93230)
 * Express youtube-tutorial [Academind](https://www.youtube.com/watch?v=bf8L9tQi_MQ)
-
 
 ------------------
 
