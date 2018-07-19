@@ -21,6 +21,17 @@ a[slice(0,50,2)]
 >>> 0, 2, 4, 6, ... , 50
 
 ```
+### PIP
+* [Pip package (minimal)](http://python-packaging.readthedocs.io/en/latest/minimal.html)
+
+### Style
+
+```python
+module_name, package_name, ClassName, method_name, ExceptionName, 
+function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name,
+function_parameter_name, local_var_name.
+```
+* [Google python style guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md)
 
 
 ### Packages I find useful.
