@@ -19,7 +19,6 @@ conversational system in order to maximize the natural timing of the system.
 (Here comes the argumentation of why this work is an update to the previous research)
 Interactivity.
 
-s
 ## Future Goal
 A conversation is instantiated by the actual passing of information in the real world. The
 speech and movements/correlated gestures instantiates conversation and the speaker is
@@ -37,6 +36,7 @@ conversation and their personalities. That is the properties of the involved gen
 models. However, to understand when the drivers switch one possibility is that there are
 enough information in the local audio signal that timing can be correctly classified to a
 sufficiently (for what purpose) high degree.
+
 
 
 ## Deep Learning When training unconditional deep generative models to generate raw audio
@@ -158,9 +158,20 @@ Prior Knowledge
 Figure taken from [1. Tutorial on Variation Autoencoders (arxiv)](https://arxiv.org/pdf/1606.05908.pdf)
 
 
-## Code
-[librosa](https://github.com/librosa/librosa)
+## Spectrogram
 
-Implementations:
-* Nvidia Tacotron2 PyTorch [implementation](https://github.com/NVIDIA/tacotron2)
-* Nvidia Wavenet [implementation](https://github.com/NVIDIA/nv-wavenet)
+## What is Windowing
+### [Source: Window in FFT](http://download.ni.com/evaluation/pxi/Understanding%20FFTs%20and%20Windowing.pdf)
+<img width="500" src="/images/notes/DeepLearning/FFT-window-explenation1.png" alt="Window 1">
+<img width="500" src="/images/notes/DeepLearning/FFT-window-explenation2.png" alt="Window 2">
+<img width="500" src="/images/notes/DeepLearning/FFT-window-explenation3.png" alt="Window 3">
+
+everything under here is as of now copied from wiki
+
+### Mel-frequence cepstrum
+In sound processing, the mel-frequency cepstrum (MFC) is a representation of the short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum on a nonlinear mel scale of frequency.
+
+### MFCC
+
+Mel-frequency cepstral coefficients (MFCCs) are coefficients 
+They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum").

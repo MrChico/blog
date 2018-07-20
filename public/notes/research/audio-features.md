@@ -56,7 +56,6 @@ values are shown as dots on the analogue signal.
 
 <img src="https://storage.googleapis.com/deepmind-live-cms/documents/BlogPost-Fig1-Anim-160908-r01.gif" alt="Wave animation">
 
-
 In python the [Librosa](https://github.com/librosa/librosa) package can read a wav-file
 from disk and convert it into a [numpy](https://docs.scipy.org/doc/numpy/user/quickstart.html) 
 array, our raw audio representation.
@@ -91,9 +90,7 @@ used in the past literature (see Section 2), and 3) its theoretical significance
 [2]).
 </blockquote>
 
-
 ## Tools
-
 [OpenSmile](https://audeering.com/technology/opensmile) is popular
-
 [OpenSmile Book](https://www.audeering.com/research-and-open-source/files/openSMILE-book-latest.pdf)
+[Librosa](https://librosa.github.io/librosa/)

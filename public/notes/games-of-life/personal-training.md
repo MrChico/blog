@@ -7,40 +7,22 @@ that yoga and some flexibility training could be really beneficial and need to l
 such exercises to my life. The workout in general is place agnostic meaning that  workouts can be
 performed at home, at the gym, outside or somewhere.
 
-
 <strong>Points</strong>
 * Whole body exercises!
-  * Coordination
+  * <strong>Coordination</strong>
   * Small stabillizing muscles
 * Back and neck training to "combat" my daily office wear and tear
-* Cardiovascular training
+* Cardiovascular training.
 
 <strong>Important exercises</strong>
+* <strong>Burpees</strong>
 * Deadlift
 * Pull-ups
 * Squat
 * Bench-press
 * Kettlebell swings 
-* Burpees
 
 <strong>Yoga</strong>
 * How to start?
 * How do I want to practice?
-
-
-## Lets go!
-
-
-This week will be the start of my new training regime. This first week has two major rules:
-
-* Train at least 3 times
-* Use all the <strong>Important exercises</strong> at least once.
-
-
-
-| Monday        | Tuesday         | Wednesday | Thursday | Friday | Saturday | Sunday |
-| ------------- | :-------------: | -----:    | -----:   | -----: | -----:   | -----: |
-|               |                 |           |          |        |          |        |
-|               |                 |           |          |        |          |        |
-|               |                 |           |          |        |          |        |
 

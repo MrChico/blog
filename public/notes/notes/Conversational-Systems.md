@@ -19,8 +19,3 @@
 > curse of dimensionality and is intractable for any realistic vocabulary size.
 
 Then cites Bengio et al(2003) that proposed <em>word embeddings</em>.
-
-
-## Recurrent Neural Network
-
-
