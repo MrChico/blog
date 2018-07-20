@@ -7,12 +7,11 @@ var fs           = require('fs');
 var hbs          = require('express-handlebars');
 
 // Routes
-var indexRouter      = require('./routes/index');
-var aboutRouter      = require('./routes/about');
-var notesRouter      = require('./routes/notes');
+var indexRouter = require('./routes/index');
+var aboutRouter = require('./routes/about');
+var notesRouter = require('./routes/notes');
 
 var app = express();
-
 
 // view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts'}));

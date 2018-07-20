@@ -1,34 +1,19 @@
 <head>
-  <link rel='stylesheet' href='/styles/gridnotes.css'> 
+  <link rel='stylesheet' href='/styles/notes.css'> 
   <script src="/scripts/notes.js"></script>
 </head>
 
 <body>
-  <div class="sidenav" id="menu">
-    <span class="toggle" style="font-size:30px;cursor:pointer;color:white;" onclick="closeNav()">&times;</span>
-    <ul>
-      <li><a class="test-item" id=''>TEST</a> </li>
-      {{#each data}}
-      <li><a class="menu-item" href={{this}} >{{@key}}</a> </li>
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="main" id="main">
-    <!-- Show/hide menu -->
-    {{#if showMenu}}
-      <script>
-        openNav()
-        fullHeader()
-      </script>
-    {{else}}
-      <script>
-        closeNav()
-        smallHeader()
-      </script>
-    {{/if}}
-
-    <!-- main articel -->
-    {{{article}}}
+  <div class="frontpage">
+	{{#each Dir}}
+	  <div class="category-card" id={{this.name}} 
+		style="background-image:url('{{this.img}}')">
+		<a href='{{this.path}}'>
+		  <h1>{{this.name}}</h1>
+		  <h2>{{this.path}}</h2>
+		  <h3>{{this.img}}</h3>
+		</a>
+	  </div>
+	{{/each}}
   </div>
 </body>

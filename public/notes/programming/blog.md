@@ -42,13 +42,26 @@ in the [index content container](/). Which I have not started working on.
 -----------------------
 ### Tensorflow.js [TSNE](https://github.com/tensorflow/tfjs-tsne)
 
-
 -----------------------
 ### Notes in html
-
 * Common snippets
 
 ### Hide/Show Gists 
-
 Have a clickable "link" that shows embedded gist.
 Now: Embedded gifs without css tweak.
+
+# Code
+
+<strong>Find all folders in path</strong> 
+```js
+const dirs = p => readdirSync(p).filter(f => statSync(join(p, f)).isDirectory())
+```
+
+<strong>Handlebar</strong>
+
+Iterate through object "Dir":
+```html
+{{#each Dir}}
+<li><a class="frontpage-item" href={{this}} >{{@key}}</a> </li>
+{{/each}}
+```

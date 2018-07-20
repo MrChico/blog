@@ -3,33 +3,36 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel='stylesheet' href='/styles/gridlayout.css'> 
+    <link rel='stylesheet' href='/styles/layout.css'> 
     <title> {{title}} </title>
   </head>
   <body>
     <div class="grid-body">
 
-      <header id="fullHeader">
-        <div id="header-text">
-          <h1 class="">Erik </h1>
-          <h3 class="">PhD Candidate at KTH</h3>
-        </div>
-        <span id="global-menu" style="color:white;font-size:30px;cursor:pointer;float:left;" onclick="openNav()">&#9776; </span>
-
-        <div class="navbar">
-          <!-- TODO: make dropdown for notes -->
-          <ul>
-            <li> <a href="/">Home</a></li>
-            <li> <a href="/note">Notes</a></li>
-            <li> <a href="/about" >About</a></li>
-          </ul>
-        </div>
-      </header>
+	  <header id="fullHeader">
+		<a id="header-text" href="/">
+		  <p id='header-name'>Erik Ekstedt </p>
+		  <p id='header-subtitle'>PhD</p>
+		  <p id='header-subsubtitle'>KTH</p>
+		</a>
+		<!-- This is bad because I check the server for all md files everytime I load a page -->
+		<div class="navbar">
+		  <a href="/">Home</a>
+		  <div class="dropdown">
+			<a href="/note" class="dropbtn">Notes</a>
+			<div class="dropdown-content">
+			  {{#each allNotes}}
+			  <a href="{{this}}">{{@key}}</a>
+			  {{/each}}
+			</div>
+		  </div>
+		  <a href="/about">About</a>
+	  </header>
 
       <div class="content"> {{{ body }}} </div>
-
       <div class="footer"> <a href='https://www.github.com/ErikEkstedt'> <img src="/icons/github.svg" style="width: 100px"> </a> </div>
 
     </div>
   </body>
 </html>
+<!-- style="background:rgba(33,34,63,0.6);color:white;font-size:30px;cursor:pointer;float:left;width:40px" --> 

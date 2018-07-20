@@ -10,7 +10,7 @@ function mdToHtml(id) {
         var summary = file.substring(0, stop);
         var summaryHtml = converter.makeHtml(summary);  //string
         // add summary class and link
-        var routerPath = path.join('/note', dirName, fileName)
+        var routerPath = path.join('/notes', dirName, fileName)
         summaryHtml = '<div class="summary">' + summaryHtml + '<a class="read-more-button" href="' + routerPath + '"><b>READ MORE »</b></a>';
         return summaryHtml
     }

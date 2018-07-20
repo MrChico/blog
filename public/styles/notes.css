@@ -1,0 +1,30 @@
+.frontpage {
+    /* Small screens */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    background: black;
+    overflow: auto;
+    max-height: 1000px;
+}
+
+.category-card {
+    text-align: center;
+    background: rgba(163,221,246,0.78);
+    width: 300;
+    height: 200px;
+    margin: 20px;
+	color: white;
+}
+
+#ML {
+    background: none;
+    background-image: url('/images/categories/ML.png');
+    background-size: cover;
+}
+
+#programming {
+    background: none;
+    background-image: url('/images/categories/programming.png');
+    background-size: cover;
+}
