@@ -9,6 +9,7 @@ showdown.setFlavor('github');
 
 const converter = new showdown.Converter();
 const noteHeader = path.resolve('public/html/noteHeader.html')
+const imagePath = path.resolve("public/images")
 const notePath = path.resolve("public/notes")
 const headHtml = fs.readFileSync(noteHeader, 'utf8');
 
@@ -18,11 +19,10 @@ const getFiles = p => fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f))
 
 function getFilesAndPaths(dir, ext='md') {
 	// find all .ext (.md) files in dir
-    var name, fp;
+    var name;
     var allFilesAndPaths = {};
     var files = glob.sync("**/*"+ext, {cwd: dir});
     files.forEach( function(f) {
-        // fp = f.split(path.sep)
         name = f.split(path.sep).pop(); // [-1];
         allFilesAndPaths[name] = '/note/' + f;
     });
@@ -35,22 +35,38 @@ function getHtml(fpath) {
 function dirRoutes(dirs){
 	data = []
 	dirs.forEach( (value, index, array) => {
+
+		imgPath = path.join(imagePath, 'notes', value, value+'.png')
+		if (fs.existsSync(imgPath)) {
+			imgPath = path.join('/images', 'notes', value, value+'.png')
+		}else {
+			imgPath = path.join('/images','universe.jpg')
+		}
+
 		data.push({
 			'name': value, 
-			'path': '/note/'+value, 
-			'img': '/images/categories/'+value+'.png'
-		})
+			'url': path.join('/note', value),
+			'img': imgPath})
 	})
 	return data
 }
 function fileRoutes(files, dir){
 	data = []
 	files.forEach( (value, index, array) => {
+
+		imgPath = path.join(imagePath, 'notes', value, value+'.png')
+		if (fs.existsSync(imgPath)) {
+			imgPath = path.join('/images', 'notes', value, value+'.png')
+		}else {
+			imgPath = path.join('/images','universe.jpg')
+		}
+
 		data.push({
 			'name': value, 
-			'path': '/note/'+dir+'/'+value,
-			'img': '/images/notes/'+value+'.png'
-		})
+			'url': path.join('/note', dir, value),
+			// 'img': path.join('/images/notes', dir, value.slice(0,-2)+'png')
+			//
+			'img': imgPath})
 	})
 	return data
 }
@@ -58,11 +74,14 @@ function fileRoutes(files, dir){
 var allFilesAndPaths = getFilesAndPaths(notePath);
 console.log(util.inspect(allFilesAndPaths, false, null))
 
-
 router.get('/', function(req, res, next) {
 	var dirs = getDirs(notePath).sort();
 	var dirpaths = dirRoutes(dirs);
-	res.render('notes', {  title: 'Blog', Dir: dirpaths, allNotes: allFilesAndPaths}); 
+	res.render('notes', {
+		title: 'Blog: Notes',
+		isDir: true,
+		dir: dirpaths,
+		allNotes: allFilesAndPaths}); 
 });
 
 router.get('/:category', (req, res) => {
@@ -72,7 +91,12 @@ router.get('/:category', (req, res) => {
 	// TODO 
 	// search all files (.md) for the first image
 	// store path to that image and use as thumbnail
-	res.render('notes', {Dir: filepaths, title: 'Blog', allNotes: allFilesAndPaths}); 
+	res.render('notes', {
+		title: 'Blog: '+category,
+		isDir: true,
+		dir: filepaths,
+		allNotes: allFilesAndPaths
+	}); 
 });
 
 router.get('/:category/:file', (req, res) => {
@@ -84,7 +108,24 @@ router.get('/:category/:file', (req, res) => {
     noteName = noteName[noteName.length-1];
     noteName = noteName.slice(0, noteName.length-3);  // remove extension (.md)
     noteName = 'Notes: ' + noteName
-	res.render('posts', {allNotes: allFilesAndPaths, title: noteName, article: noteHtml});
+	res.render('posts', {
+		title: noteName,
+		allNotes: allFilesAndPaths,
+		article: noteHtml});
 });
 
+
+// ----------- REACT -----------
+
+router.get('/react', function(req, res, next) {
+	var dirs = getDirs(notePath).sort();
+	var dirpaths = dirRoutes(dirs);
+	// res.send(
+	// 	'notes', {
+	// 		title: 'Blog: Notes',
+	// 		isDir: true,
+	// 		dir: dirpaths,
+	// 		allNotes: allFilesAndPaths}); 
+	res.send({id: 'hej'});
+});
 module.exports = router;

@@ -1,4 +1,4 @@
-<img class="article-image" src="/images/notes/ReinforcementLearning.png" alt="RL"> 
+<img class="article-image" src="/images/notes/notes/reinforcement-learning.png" alt="RL"> 
 
 # Reinforcement Learning
 

@@ -1,7 +1,5 @@
+<img width='800' src="/images/notes/vim/monokai.png" alt="Erik"/>
 #  Color in vim
-
-![Monokai](/images/notes/vim/monokai.png)
-
 ## Introduction
 
 I started exploring how to make a theme for [Oni](https://github.com/onivim/oni). I wanted to make 
