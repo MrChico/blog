@@ -7,6 +7,12 @@ The goal of the project is to write down/script what I am learning in order to, 
 
 ## Todo
 
+Blog:
+* Commercial Frontpage
+* Crypto page
+* Static site - Gatsby
+* React
+
 * [ ] Sort note menu
 * [ ] Dropdown menu for notes
 * [ ] Fancy words 
