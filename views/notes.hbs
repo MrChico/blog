@@ -5,15 +5,27 @@
 
 <body>
   <div class="frontpage">
-	{{#each Dir}}
-	  <div class="category-card" id={{this.name}} 
-		style="background-image:url('{{this.img}}')">
-		<a href='{{this.path}}'>
-		  <h1>{{this.name}}</h1>
-		  <h2>{{this.path}}</h2>
-		  <h3>{{this.img}}</h3>
-		</a>
+	{{#if isDir}}
+	  {{#each dir}}
+		<div class="category-card" id={{this.name}} style="background-image:url('{{this.img}}')">
+		  <a href='{{this.url}}'>
+			<h1>{{this.name}}</h1>
+			<!-- <h2>{{this.url}}</h2> -->
+			<!-- <h3>{{this.img}}</h3> -->
+		  </a>
+		</div>
+	  {{/each}}
+	{{else}}
+	  <!-- Should the actual posts be shown differently than the directories? -->
+	  <div class="posts">
+		<ul>
+		  {{#each dir}}
+			<li>
+			  <a href='{{this.url}}'>{{this.name}} </a>
+			</li>
+		  {{/each}}
+		</ul>
 	  </div>
-	{{/each}}
+	{{/if}}
   </div>
 </body>
