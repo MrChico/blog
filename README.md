@@ -4,27 +4,30 @@ The purpose of this project is to learn html, css and javascript.
 
 The goal of the project is to write down/script what I am learning in order to, as easy as possible, explain my ideas to others.
 
+React seems to be really valuable to now. 
+
+The future is the web. 
 
 
 ## Todo
 
 Blog:
 * Commercial Frontpage
-* Crypto page
-* Static site - Gatsby
-* React
 
-* [ ] Sort note menu
-* [ ] Dropdown menu for notes
 * [ ] Fancy words 
-* [ ] Use react
+* [ ] React
+  - Static site - Gatsby
   - As of now I have duplicates of css files in ./client (react) and ./public/styles
 	(node, hbs)
 
+* [ ] Crypto page
+  - API calls to marketcap
+  - Graphs of relevant currencies
+  - Git commit/activity for projects
+  - Investments. Value at buy. Total market value. Market share of different projects.
 
 
 #### Fancy words
-
 "Fancy words" are words I come across when reading papers and I like the way the phrased something. 
 It can be a single word with the associated meaning or a phrase of words.
 

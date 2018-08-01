@@ -51,7 +51,7 @@ fix this instead of dual booting. I am sad that I can't run Linux on my MBP :(
 ## SSH
 
 All computers needs to run both client and server ssh such that all computers can get files from all other computers.
-* [blog](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
+* Source: [zdueyb Blog](https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer)
 * Install: 
   * `sudo apt-get install openssh-client` 
   * `sudo apt-get install openssh-server` 
