@@ -1,5 +1,7 @@
 <img class="article-image" src="https://mycroft.ai/wp-content/uploads/2017/06/Mycroft_Site_Logo.png" alt="Mycroft"> 
 
+<div style="border:2px solid;padding:30px;background:" class="Menu">
+
 # Table of Contents
 
 - [Documentation](https://mycroft.ai/documentation/)
@@ -11,8 +13,17 @@
   * [4. Investigate code](####4)
 - [Overview](#overview)
 - [Technical details](#technical-details)
+</div>
+
+<div style="border:2px solid;padding:30px;width:100%" class="Main">
 
 # Mycroft
+
+<br>
+<br>
+
+<div style="border:2px solid;padding:30px;background:" class="Introduction">
+
 # Introduction
 
 Mycroft is an open source voice assistant
@@ -21,7 +32,10 @@ Mycroft is an open source voice assistant
 
 > As of late 2017, Mycroft is undergoing heavy development. It is at a level of maturity where developers and hardware hobbyists will be able to use it effectively. However, it is not yet ready for mainstream adoption.
 
-------------
+</div>
+
+<br>
+<br>
 
 ### My interest
 
@@ -30,14 +44,22 @@ program an assisstant. Both from a practical point of view about how to actually
 assistant but also for research. I want to see how they handle commands and audio and if
 the platform could work as a base for me to play arund with TTS/STT/conversation-skills.
 
+-------------------
+
+
+
+<br>
+<br>
+
+<div style="border:2px solid;padding:30px;background:" class="Install">
+
 # [Install for linux](https://github.com/MycroftAI/mycroft-core/blob/dev/README.md)
+  #### 1. Clone repo
 
-#### 1. Clone repo
-
-```bash
-cd ~/
-git clone https://github.com/MycroftAI/mycroft-core.git
-```
+  ```bash
+  cd ~/
+  git clone https://github.com/MycroftAI/mycroft-core.git
+  ```
 
 #### 2. Run dev_setup.sh
 
@@ -68,9 +90,10 @@ Run `./start-mycroft.sh debug` to start mycroft. This command starts all service
 
 #### 4. Investigate code
 
-When mycroft is installed it creates and operates in a virtual environment and in order to easily
-access this environment I created an alias to source it. I first checked the `start-up.sh` script to
-see where the environment was created. 
+When mycroft is installed it creates and operates in a virtual environment and in order to
+easily access this environment I created an alias to source it. I first checked the
+[start-up.sh](https://github.com/MycroftAI/mycroft-core/blob/dev/start-mycroft.sh) script
+to see where the environment was created. 
 
 ```bash
 alias somy="source $HOME/mycroft-core/.venv/bin/activate"
@@ -94,18 +117,19 @@ rm -rf ~/.mycroft
 sudo rm -rf /opt/mycroft
 ```
 
+</div>
+
 <br>
 <br>
--------------------------------
 
--------------------------------
-
+<div style="border:2px solid;padding:30px;background:" class="Overview">
 
 # Overview
 <figure>
   <img src="/images/onenote/mycroft.png" alt="Mycroft note with onenote" width="100%" > 
   <figcaption>Figure: Notes on mycroft. </figcaption>
 </figure> 
+
 
 #### This section is just a reformulation of ["About Mycroft"](https://mycroft.ai/documentation/mycroft-software-hardware/#about-mycroft) in the documentation for my own learning.
 
@@ -114,26 +138,62 @@ Mycroft first always listens for the wake word using [PocketSphinx]() which is b
 The Major components started when initializing `./mycroft_start.sh all` are the server,
 speech, audio and skill programs. 
 
+</div>
 
-### TODO: 
-#### How are skills implemented? What code initates a skill?
-#### Where is the list of keywords from all skills located? 
-#### Implement a simple skill.
-#### Make a super useful cool skill 
+<br>
+<br>
 
-### Skills
-The skills mycroft utilizes are installed through the CLI-command `msm install` where msm is the mycroft skill manager. All the skills are git-repos cloned into `/opt/mycroft/skills/` and when mycroft is started the loading procedure is shown in the cli-ui.
+<div style="border:2px solid;padding:30px;background:" class="Todo">
 
-## Projects
+# TODO
 
-### Open file
+* How are skills implemented? 
+* What code initates a skill?
+* Where is the list of keywords from all skills located?
+* Implement a simple skill -> first project
+* Implement many skills -> Projects
+
+Skills:
+- The skills mycroft utilizes are installed through the CLI-command `msm install` where msm is the mycroft skill manager. All the skills are git-repos cloned into `/opt/mycroft/skills/` and when mycroft is started the loading procedure is shown in the cli-ui.
+
+
+<div style="border:2px solid;padding:20px;background:" class="Projects" id="container">
+
+## Skills
+
+* Step 1: [Introduction developing skills](https://mycroft.ai/documentation/skills/introduction-developing-skills/)
+
+
+<div style="border:2px solid;padding:30px;background:" class="skill" id="switchDesktop">
+
+## Switch Desktop
+
+Make projects that makes it easier to interact with MacOS. My apple skills are good enough
+for work.  MacOS does not seem to have a straight forward way to focus screens (can this
+be right?)
+
+</div>
+
+<br>
+<br>
+
+<div style="border:2px solid;padding:30px;background:" class="skill" id="openFile">
+
+## Open file
+
 I want to be able to search in an arbitrary folder for pdf and open it with zathura (or
 customizeable pdf-reader). Open new documents in tab of existing session.
 
 1. query.filepath
 2. execute command (open, show folder terminal/dolphin,)
+</div>
 
-### Recorder
+<br>
+<br>
+
+<div style="border:2px solid;padding:30px;background:" class="skill" id="recorder">
+
+## Recorder
 
 > user: Computer record.
 
@@ -144,17 +204,19 @@ customizeable pdf-reader). Open new documents in tab of existing session.
   * User label
   * Keyboard events
   * Mouse events
+</div>
 
 
+</div>
 
 <br>
 <br>
--------------------------------
 
--------------------------------
 ## Technical details 
 
 In progress speech recognition [Deepspeech](https://github.com/mozilla/DeepSpeech.git), a project by mozilla based on baidou paper from 2014: (ee: seems interesting)
   * [arxiv](https://arxiv.org/abs/1412.5567)
   * [pdf](https://arxiv.org/pdf/1412.5567.pdf)
 
+</div>
+</div>
