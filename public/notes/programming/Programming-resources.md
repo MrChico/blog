@@ -63,6 +63,7 @@ Other sources
 * [Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials): This was a really good source
 * [Git zero to hero](https://hackernoon.com/git-from-zero-to-hero-starting-with-foundations-e42e49b524c5)
 * How to create new git repo from sub-directory of an exisiting repo [Tutorial](https://aigeec.com/how-to-split-a-git-repo/)
+* [Amend commits](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8) 
 
 ### Shell:
 * [Shellscript: Basic tutorial](https://www.shellscript.sh/index.html) 
