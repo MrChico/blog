@@ -1,19 +1,19 @@
 # Blog
 
-The purpose of this project is to learn html, css and javascript.
 
-The goal of the project is to write down/script what I am learning in order to, as easy as possible, explain my ideas to others.
+#### The purpose of this project is to learn html, css and javascript; web technologies;
 
-React seems to be really valuable to now. 
-
-The future is the web. 
-
+* The goal of the project is to write down/script what I am learning in order to, as easy as possible, explain my ideas to others.
+* Instead of having notes as separate markdown files I want to have one place where I can
+  access all my notes and show my notes and ideas to others.
+* Tools & design: 
+  - React seems to like a good thing to know
 
 ## Todo
 
 Blog:
-* Commercial Frontpage
 
+* Commercial Frontpage
 * [ ] Fancy words 
 * [ ] React
   - Static site - Gatsby
